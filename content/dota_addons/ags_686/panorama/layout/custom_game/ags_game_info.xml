@@ -1,0 +1,37 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/dotastyles.css" />
+		<include src="file://{resources}/styles/custom_game/overthrow_game_info.css" />
+	</styles>
+	<Panel class="OverthrowGameInfo">
+		<Panel id="Title">
+			<Label id="TitleName" text="#addon_game_name" />
+		</Panel>
+		<Label id="ObjectiveHeader" class="Header" html="true" text="#addon_game_info_feature_header" />
+		<Label id="BriefDescription" text="#addon_game_info_feature" />
+		<Label id="RecommendHeader" class="Header" html="true" text="#addon_game_info_recommend_header" />
+		<Label id="Recommend" text="#addon_game_info_recommend" />	
+		<Label id="IntroductionHeader" class="Header" html="true" text="#addon_game_info_introduction_header" />
+		<Label id="Introduction" text="#addon_game_info_introduction" />
+		<Label id="TipsHeader" class="Header" html="true" text="#addon_game_info_tips_header" />
+		<Panel id="TipsRow" class="InfoRow">
+			<Label id="TipText01" class="TipText" html="true" text="#addon_game_info_tips_01" />
+			<Label id="TipText02" class="TipText" html="true" text="#addon_game_info_tips_02" />
+			<Label id="TipText03" class="TipText" html="true" text="#addon_game_info_tips_03" />
+			<Label id="TipText04" class="TipText" html="true" text="#addon_game_info_tips_04" />
+			<Label id="TipText05" class="TipText" html="true" text="#addon_game_info_tips_05" />
+			<Label id="TipText06" class="TipText" html="true" text="#addon_game_info_tips_06" />
+			<Label id="TipText07" class="TipText" html="true" text="#addon_game_info_tips_07" />
+			<Label id="TipText08" class="TipText" html="true" text="#addon_game_info_tips_08" />
+			<Label id="TipText09" class="TipText" html="true" text="#addon_game_info_tips_09" />
+			<Label id="TipText10" class="TipText" html="true" text="#addon_game_info_tips_10" />
+			<Label id="TipText11" class="TipText" html="true" text="#addon_game_info_tips_11" />
+			<Label id="TipText12" class="TipText" html="true" text="#addon_game_info_tips_12" />
+			<Label id="TipText13" class="TipText" html="true" text="#addon_game_info_tips_13" />
+			<Label id="TipText14" class="TipText" html="true" text="#addon_game_info_tips_14" />
+			<Label id="TipText15" class="TipText" html="true" text="#addon_game_info_tips_15" />
+			<Label id="TipText16" class="TipText" html="true" text="#addon_game_info_tips_16" />
+		</Panel>
+	</Panel>
+</root>
+

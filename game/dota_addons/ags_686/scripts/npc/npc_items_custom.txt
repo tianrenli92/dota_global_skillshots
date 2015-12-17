@@ -1,0 +1,287 @@
+"DOTAAbilities"
+{
+	"item_attr_bonus"
+	{       
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"									"1000"
+		"BaseClass"						"item_datadriven"
+		"AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"			
+		"AbilityTextureName"	"item_attr_bonus"
+		"AbilityCastPoint"		"0.0"
+			
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"							"2100"
+		"ItemQuality"						"epic"
+		"ItemStackable"					"1"
+		"ItemShareability"			"ITEM_FULLY_SHAREABLE_STACKING"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"		"1"
+		"ItemKillable"          "0"
+		"ItemSellable"          "1"
+		"ItemDroppable"         "1"
+		"ItemPurchasable"				"1"
+		"ItemAlertable"					"1"
+	 
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"items/attr_bonus.lua"
+				"Function"		"AttrBonus"
+				"Attr"				"%bonus_attr"
+				"Cost"				"2100"
+				"Modifier_apply" "modifier_attr_bonus"
+			}
+			"ApplyModifier"
+			{
+				"Target" "CASTER"
+				"ModifierName" "modifier_attr_bonus_2"
+			}	
+	    "SpendCharge"
+			{
+			}        
+			
+		}
+		"Modifiers"
+		{
+			"modifier_attr_bonus"
+			{
+				"Attributes"       "MODIFIER_ATTRIBUTE_PERMANENT" 
+			}
+			"modifier_attr_bonus_2"
+			{
+				"Attributes"       "MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_MULTIPLE" 
+				"IsHidden"	 "1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"  "%bonus_attr"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"		"%bonus_attr"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"	"%bonus_attr"
+				}			
+			}
+		}
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attr"		"10"
+			}
+		}	
+	}
+	
+	"item_spectate_game"
+	{       
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"									"1001"
+		"BaseClass"						"item_datadriven"
+		"AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"			
+		"AbilityTextureName"	"item_spectate_game"
+		"AbilityCastPoint"		"0.0"
+			
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"							"100"
+		"ItemQuality"						"consumable"
+		"ItemStackable"					"0"
+		//"ItemShareability"			"ITEM_FULLY_SHAREABLE_STACKING"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"		"1"
+		"ItemKillable"          "0"
+		"ItemSellable"          "1"
+		"ItemDroppable"         "1"
+		"ItemPurchasable"				"1"
+		"ItemAlertable"					"1"
+	 
+		"OnSpellStart"
+		{
+	    "SpendCharge"
+			{
+			}        
+			"RunScript"
+			{
+				"ScriptFile"	"items/spectate.lua"
+				"Function"		"SpectateAndAbandon"
+			}
+		}
+	}
+		
+	//=================================================================================================================
+	// Recipe: Slippers of Halcyon
+	//=================================================================================================================
+	"item_recipe_slippers_of_halcyon"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"1002"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"BaseClass"						"item_recipe_tranquil_boots"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_slippers_of_halcyon"
+		"ItemRequirements"
+		{
+			"01"						"item_tranquil_boots;item_energy_booster"
+		}
+	}
+
+	//=================================================================================================================
+	// Slippers of Halcyon
+	//=================================================================================================================
+	"item_slippers_of_halcyon"
+	{
+		"ID"							"1003"
+
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"AbilityUnitTargetTeam"  "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"  "DOTA_UNIT_TARGET_BUILDING"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"item_slippers_of_halcyon"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCastRange"        "20000"
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"15.0"
+		"AbilityChannelTime"			"15.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"							"1000"
+		"ItemCost"						"1900"
+		"ItemShopTags"					"move_speed;boost_mana;mana_pool"
+		"ItemQuality"					"rare"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemAlertable"					"1"
+		"ItemAliases"					"mana;mb"
+	
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"Target" "TARGET"
+				"ModifierName" "modifier_slippers_of_halcyon_caster"
+			}
+			"ApplyModifier"
+			{
+				"Target" "CASTER"
+				"ModifierName" "modifier_slippers_of_halcyon_caster_2"
+			}
+		}
+
+		"OnChannelFinish"
+		{
+		}
+
+		"OnUnequip"
+		{
+		}
+
+		"Modifiers"
+		{
+			"modifier_slippers_of_halcyon"
+			{
+				"Passive"	 "1"
+				"IsHidden"	 "1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"  "%bonus_movement"
+					"MODIFIER_PROPERTY_MANA_BONUS"			"%bonus_mana"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	"%bonus_armor"
+				}
+			}
+			
+			"modifier_slippers_of_halcyon_caster_2"
+			{
+				"Duration"	"%duration"
+				"EffectName"		"particles/generic_gameplay/generic_stunned.vpcf"
+				"EffectAttachType" "follow_overhead"
+    		"OverrideAnimation" "ACT_DOTA_DISABLED"
+
+				"States"
+				{
+            "MODIFIER_STATE_STUNNED" "MODIFIER_STATE_VALUE_ENABLED"				
+				}
+			}
+			
+			"modifier_slippers_of_halcyon_caster"
+			{
+				"Duration"	"%duration"
+				"ThinkInterval"		"%tick_rate"
+				"Attributes"       "MODIFIER_ATTRIBUTE_MULTIPLE" 
+				"OnIntervalThink"
+				{
+					"Heal"
+					{
+						"Target" "TARGET"
+						"HealAmount"   "%hp_per_tick"
+					}
+					"AttachEffect"
+					{
+						"Target" "TARGET"
+						"EffectName"		"particles/neutral_fx/troll_heal.vpcf"
+						"EffectAttachType"	"follow_origin"
+					}
+					"FireSound"
+					{
+						"Target" "TARGET"
+						"EffectName" "n_creep_ForestTrollHighPriest.Heal"
+					}
+				}	
+			}
+		}
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_movement"		"70"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_mana"				"250"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"4"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"hp_per_tick"			"40"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"tick_rate"				"1"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"15.0"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cast_range"				"20000"
+			}
+		}
+	}
+}

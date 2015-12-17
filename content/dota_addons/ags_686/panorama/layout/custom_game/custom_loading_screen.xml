@@ -1,0 +1,45 @@
+<root>
+  <styles>
+    <include src="file://{resources}/styles/custom_game/custom_loading_screen.css" />
+  </styles>
+  <Panel class="AddonLoadingRoot">
+    <Panel id="CustomBg" >
+      <Image id="gamemode" class="SeqImg" src="file://{images}/custom_game/loading_screen/gamemode_1.jpg" />
+    </Panel>
+    <Panel id="TitlePanel">
+      <Label id="AddonTitle" text="#addon_game_name" style="" />
+    </Panel>
+    <Panel id="CreditPanel">
+      <Label id="AddonCredit_01" text="#addon_credit_01" style="" />
+			<Panel id="CreditPanelSub_01" class="CreditPanelSub">
+				<DOTAAvatarImage steamid="76561198121962997" style="" />
+      	<Label id="AddonCredit_02" text="#addon_credit_02" style="" />
+      </Panel>
+      <Label id="AddonCredit_03" text="#addon_credit_03" style="" />
+      <Label id="AddonCredit_04" text="#addon_credit_04" style="" />
+      <Label id="AddonCredit_05" text="#addon_credit_05" style="" />
+      <Label id="AddonCredit_06" text="#addon_credit_06" style="" />
+			<Panel id="CreditPanelSub_02" class="CreditPanelSub">
+				<DOTAAvatarImage steamid="76561197989020883" style="" />
+      	<Label id="AddonCredit_07" text="#addon_credit_07" style="" />
+      </Panel>
+			<Panel id="CreditPanelSub_03" class="CreditPanelSub">
+				<DOTAAvatarImage steamid="76561198109959093" style="" />
+      	<Label id="AddonCredit_08" text="#addon_credit_08" style="" />
+      </Panel>
+      <Label id="AddonCredit_09" text="#addon_credit_09" style="" />
+			<Panel id="CreditPanelSub_04" class="CreditPanelSub">
+				<DOTAAvatarImage steamid="76561198152334515" style="" />
+      	<Label id="AddonCredit_10" text="#addon_credit_10" style="" />
+      </Panel>
+      <Label id="AddonCredit_11" text="#addon_credit_11" style="" />
+      <Label id="AddonCredit_12" text="#addon_credit_12" style="" />
+      <Label id="AddonCredit_13" text="#addon_credit_13" style="" />
+      <Label id="AddonCredit_14" text="#addon_credit_14" style="" />
+      <Label id="AddonCredit_15" text="#addon_credit_15" style="" />
+      <Label id="AddonCredit_16" text="#addon_credit_16" style="" />
+      <Label id="AddonCredit_newplayer_01" text="#addon_credit_newplayer_01" style="color: #ec5355;" />
+      <Label id="AddonCredit_newplayer_02" text="#addon_credit_newplayer_02" style="color: #ec5355;" />
+    </Panel>
+  </Panel>
+</root>
