@@ -1232,7 +1232,7 @@
 			"02"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"radius"						"200"
+				"radius"						"0"
 			}
 			"03"
 			{
@@ -1270,7 +1270,7 @@
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"1400"
+		"AbilityCastRange"				"5000"
 		"AbilityCastPoint"				"0.69 0.69 0.69 0.69"
 
 		// Time		
@@ -1293,12 +1293,12 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"fissure_range"				"1400"
+				"fissure_range"				"5000"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"fissure_duration"			"8.0"
+				"fissure_duration"			"12.0"
 			}
 			"03"
 			{
@@ -1349,7 +1349,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"totem_damage_percentage"	"100 200 300 400"
+				"totem_damage_percentage"	"150 300 450 600"
 			}
 			"02"
 			{
@@ -1370,6 +1370,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityCastRange"				"1600"
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
@@ -1390,7 +1391,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"aftershock_range"			"300"
+				"aftershock_range"			"1600"
 			}
 			"02"
 			{
@@ -1413,6 +1414,7 @@
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"FightRecapLevel"				"2"
+		"AbilityCastRange"				"1600"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -1437,17 +1439,17 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"echo_slam_damage_range"	"575"
+				"echo_slam_damage_range"	"1600"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"echo_slam_echo_search_range" "575"
+				"echo_slam_echo_search_range" "1600"
 			}
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"echo_slam_echo_range"		"575"
+				"echo_slam_echo_range"		"1600"
 			}
 			"04"
 			{
@@ -1480,7 +1482,7 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"blade_dance_crit_chance"	"20 25 30 35"
+				"blade_dance_crit_chance"	"20 30 40 50"
 			}
 		}
 	}
@@ -1500,7 +1502,7 @@
 	
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"0"
+		"AbilityCastRange"				"1600"
 		"AbilityCastPoint"				"0 0 0 0"
 
 		// Time		
@@ -1528,7 +1530,7 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"blade_fury_radius"			"250"
+				"blade_fury_radius"			"1600"
 			}
 		}
 	}
@@ -1545,7 +1547,7 @@
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"350"
+		"AbilityCastRange"				"20000"
 		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
 		
 		// Time		
@@ -1569,7 +1571,7 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"healing_ward_aura_radius"	"500"
+				"healing_ward_aura_radius"	"20000"
 			}
 			"03"
 			{
@@ -1603,7 +1605,7 @@
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"350"
+		"AbilityCastRange"				"20000"
 		"AbilityCastPoint"				"0.3 0.3 0.3"
 		
 		// Time		
@@ -1670,7 +1672,7 @@
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"1500"
+		"AbilityCastRange"				"20000"
 		"AbilityCastPoint"				"0.4"
 		
 		// Time		
@@ -1696,7 +1698,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"radius"					"225"
+				"radius"					"225 350 475 600"
 			}
 			"02"
 			{
@@ -1749,7 +1751,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"radius"					"450 500 550 600"
+				"radius"					"1600"
 			}
 			"02"
 			{
@@ -1780,7 +1782,7 @@
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"400 600 800 1000"
+		"AbilityCastRange"				"20000"
 		"AbilityCastPoint"				"0.4 0.4 0.4 0.4"
 		
 		// Time		
@@ -1808,7 +1810,7 @@
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"tooltip_range"				"400 600 800 1000"
+				"tooltip_range"				"20000"
 			}
 			"04"
 			{
@@ -1863,7 +1865,7 @@
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"1000"
+		"AbilityCastRange"				"5000"
 		"AbilityCastPoint"				"0.3"
 		
 		// Time		
@@ -1890,12 +1892,12 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"ghostship_distance"		"1000 1000 1000"
+				"ghostship_distance"		"100"
 			}
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"ghostship_width"			"425 425 425"
+				"ghostship_width"			"5000"
 			}			
 			"04"
 			{
@@ -1925,7 +1927,7 @@
 			"09"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"ghostship_width_scepter"	"200"
+				"ghostship_width_scepter"	"1600"
 			}
 		}
 	}
@@ -1947,7 +1949,7 @@
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"1075"
+		"AbilityCastRange"				"20000"
 		"AbilityCastPoint"				"0.45 0.45 0.45 0.45"
 
 		// Time		
@@ -1970,7 +1972,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"dragon_slave_speed"		"1200"
+				"dragon_slave_speed"		"5000"
 			}
 			
 			"02"
@@ -1987,7 +1989,7 @@
 			"04"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"dragon_slave_distance"			"1075"
+				"dragon_slave_distance"			"20000"
 			}
 		}
 	}
@@ -2005,7 +2007,7 @@
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"FightRecapLevel"				"1"
 		
-		"AbilityCastRange"				"625"
+		"AbilityCastRange"				"20000"
 		"AbilityCastPoint"				"0.45 0.45 0.45 0.45"
 		
 		// Time		
@@ -2076,7 +2078,7 @@
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"fiery_soul_max_stacks"		"3"
+				"fiery_soul_max_stacks"		"10"
 			}
 			"04"
 			{
@@ -2105,7 +2107,7 @@
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"600"
+		"AbilityCastRange"				"20000"
 		"AbilityCastPoint"				"0.45 0.45 0.45"
 
 		// Time		
@@ -2132,7 +2134,7 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"cast_range_scepter"		"600"
+				"cast_range_scepter"		"20000"
 			}
 			"03"
 			{
@@ -2161,7 +2163,7 @@
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"500"
+		"AbilityCastRange"				"20000"
 		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
 		
 		// Time		
@@ -2193,12 +2195,12 @@
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"length_buffer"		"325"
+				"length_buffer"		"20000"
 			}
 			"04"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"speed"				"1600 1600 1600 1600"
+				"speed"				"5000"
 			}
 		}
 	}
@@ -2219,7 +2221,7 @@
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"500"
+		"AbilityCastRange"				"20000"
 		"AbilityCastPoint"				"0 0 0 0"
 
 		// Time		
@@ -2263,7 +2265,7 @@
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"850"
+		"AbilityCastRange"				"20000"
 		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
 		"AbilityChannelTime"				"5.1"
 
@@ -2296,7 +2298,7 @@
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"break_distance"			"1200"
+				"break_distance"			"20000"
 			}
 			"04"
 			{
@@ -2324,7 +2326,7 @@
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"900"
+		"AbilityCastRange"				"20000"
 		"AbilityCastPoint"				"0.3 0.3 0.3"
 
 		// Time		
@@ -2371,7 +2373,7 @@
 			"06"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"splash_radius_scepter"		"300"
+				"splash_radius_scepter"		"600"
 			}
 		}
 	}
