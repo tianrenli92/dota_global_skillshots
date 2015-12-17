@@ -344,9 +344,21 @@ function CagsGameMode:TestInit()
 	SendToServerConsole("dota_dev forcegamestart") -- startgame
 	SendToServerConsole("dota_ability_debug 1") -- wtf
 	SendToServerConsole("dota_all_vision 1") -- allvision
+	
 	SendToServerConsole("dota_dev hero_level 25") -- lvlup 25
-	SendToServerConsole("dota_dev bot_level 25") -- levelbots 25
+	SendToServerConsole("dota_create_item item_blink") -- item item_blink
 	SendToServerConsole("dota_dev player_givegold 99999") -- gold 99999
+	
+	SendToServerConsole("dota_create_unit axe enemy") -- enemy axe x3
+	SendToServerConsole("dota_create_unit axe enemy") -- enemy axe x3
+	SendToServerConsole("dota_create_unit axe enemy") -- enemy axe x3
+	
+	GameRules:GetGameModeEntity():SetThink("TestInitThink", self, "TIT", 1)	
+end
+
+function CagsGameMode:TestInitThink()
+	SendToServerConsole("dota_bot_give_level 25") -- levelbots 25
+	SendToServerConsole("dota_bot_give_item item_blink") -- givebots item_blink
 end
 
 function CagsGameMode:PrintModifiers(playerID)
