@@ -14570,7 +14570,7 @@
 
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"12.0 10.0 8.0 6.0"
+		"AbilityCooldown"				"6.0 5.0 4.0 3.0"
 			
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -14594,7 +14594,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"3.0 3.0 3.0 3.0"
+				"duration"				"6.0"
 			}
 		}
 	}	
@@ -14627,7 +14627,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"duration"					"20.0 25.0 30.0 35.0"
+				"duration"					"20.0 40.0 80.0 600.0"
 			}
 			"02"
 			{
@@ -14637,7 +14637,7 @@
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus_damage"				"30 60 90 120"
+				"bonus_damage"				"30 60 120 240"
 			}
 		}
 	}
@@ -14662,9 +14662,9 @@
 		
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"1200"
+		"AbilityCastRange"				"20000"
 		"AbilityCastPoint"				"0.3 0.3 0.3"
-		"AbilityCooldown"				"4"
+		"AbilityCooldown"				"15"
 		"AbilityManaCost"				"50"
 			
 		// Special
@@ -14674,7 +14674,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"aura_radius"			"900 900 900"
+				"aura_radius"			"20000"
 			}
 			"02"
 			{
@@ -14684,7 +14684,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_gold_radius"		"925 925 925"
+				"bonus_gold_radius"		"20000"
 			}
 			"04"
 			{
@@ -14704,7 +14704,7 @@
 			"07"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"cast_range_tooltip"			"1200"
+				"cast_range_tooltip"			"20000"
 			}
 			"08"
 			{
@@ -14729,7 +14729,7 @@
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
-		"AbilityCastRange"				"3000"
+		"AbilityCastRange"				"20000"
 		"AbilityCooldown"				"35 30 25 20"
 		"AbilityManaCost"				"70 80 90 100"
 
@@ -14764,7 +14764,7 @@
 			"05"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"duration"			"16"
+				"duration"			"600"
 			}
 			"06"
 			{
@@ -14779,7 +14779,7 @@
 			"08"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"speed"				"600 600 600 600"
+				"speed"				"5000"
 			}
 			"09"
 			{
@@ -14801,6 +14801,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityCastRange"				"1600"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -14827,7 +14828,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"radius"				"175 175 175 175"
+				"radius"				"1600"
 			}
 			"03"
 			{
@@ -14853,7 +14854,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		
-		"AbilityCooldown"				"6.0 5.0 4.0 3.0"
+		"AbilityCooldown"				"4 2 1 0.5"
 			
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -14881,7 +14882,7 @@
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
 		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
-		"AbilityCastRange"				"1000"
+		"AbilityCastRange"				"20000"
 
 		"FightRecapLevel"				"2"
 
@@ -14900,7 +14901,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"cast_range_tooltip_scepter"		"1000"
+				"cast_range_tooltip_scepter"		"20000"
 			}				
 		}
 	}
@@ -14922,7 +14923,7 @@
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"750"
+		"AbilityCastRange"				"20000"
 		"AbilityCastPoint"				"0.65 0.65 0.65 0.65"
 
 		// Time		
@@ -14950,7 +14951,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"start_radius"			"200 200 200 200"
+				"start_radius"			"250"
 			}
 			"02"
 			{
@@ -14960,12 +14961,12 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"range"					"750 750 750 750"
+				"range"					"20000"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"speed"					"1050"
+				"speed"					"5000"
 			}
 			"05"
 			{
@@ -14995,7 +14996,7 @@
 			"10"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"speed_fire"			"1050"
+				"speed_fire"			"5000"
 			}
 		}		
 	}
@@ -15016,7 +15017,7 @@
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"1200"
+		"AbilityCastRange"				"20000"
 		"AbilityCastPoint"				"0.65"
 
 		// Time		
@@ -15078,7 +15079,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"20 15 10 4"
 		"AbilityDuration"				"5.0 5.0 5.0 5.0"
-		"AbilityCastRange"				"600"
+		"AbilityCastRange"				"20000"
 		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
 		
 		// Stats
@@ -15130,7 +15131,7 @@
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"900"
+		"AbilityCastRange"				"20000"
 		"AbilityCastPoint"				"0.65 0.65 0.65 0.65"
 
 		// Time		
@@ -15153,7 +15154,7 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"cast_range"				"900"					
+				"cast_range"				"20000"					
 			}
 			"03"
 			{
@@ -15183,7 +15184,7 @@
 			"08"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"cast_range_scepter"		"1800"
+				"cast_range_scepter"		"20000"
 			}
 			"09"
 			{
@@ -15206,7 +15207,7 @@
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"700"
+		"AbilityCastRange"				"20000"
 		"AbilityCastPoint"				"0.2 0.2 0.2 0.2"
 
 		// Time		
@@ -15274,7 +15275,7 @@
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"1500"
+		"AbilityCastRange"				"20000"
 		"AbilityCastPoint"				"0.2 0.2 0.2 0.2"
 
 		// Time		
@@ -15311,7 +15312,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"explosion_radius"		"375 375 375 375"
+				"explosion_radius"		"1600"
 			}
 			"05"
 			{
@@ -15326,12 +15327,12 @@
 			"07"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"speed"					"900 900 900 900"
+				"speed"					"5000"
 			}
 			"08"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"knockback_max_distance"	"400"
+				"knockback_max_distance"	"1600"
 			}
 			"09"
 			{
@@ -15387,7 +15388,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"18.0 18.0 18.0 18.0"
+				"duration"				"18.0 24.0 30.0 40.0"
 			}
 			"04"
 			{
@@ -15424,8 +15425,8 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"100"
-		"AbilityCooldown"				"90.0 75.0 60.0"
+		"AbilityCastRange"				"20000"
+		"AbilityCooldown"				"150.0 120.0 90.0"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -15448,17 +15449,17 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"break_distance"		"425"
+				"break_distance"		"20000"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"grab_radius"		"400"
+				"grab_radius"		"20000"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"grab_radius_scepter"		"400"
+				"grab_radius_scepter"		"20000"
 			}
 			"06"
 			{
@@ -15487,7 +15488,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"800"
+		"AbilityCastRange"				"20000"
 		"AbilityCooldown"				"14.0 13.0 12.0 11.0"
 
 		// Cost
@@ -15544,7 +15545,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"600 600 600 600"
+		"AbilityCastRange"				"20000"
 		"AbilityCooldown"				"16"
 
 		// Cost
@@ -15563,7 +15564,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage_max"			"100 200 300 400"
+				"damage_max"			"200 400 600 800"
 			}
 		}
 	}
@@ -15589,7 +15590,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"600 600 600 600"
+		"AbilityCastRange"				"20000"
 		"AbilityCooldown"				"24.0 24.0 24.0 24.0"
 
 		// Cost
@@ -15603,7 +15604,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"hero_teleport_delay"	"6.0 5.0 4.0 3.0"
+				"hero_teleport_delay"	"6.0 4.0 2.0 0.0"
 			}
 		}
 	}
@@ -15624,7 +15625,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"900 900 900 900"
+		"AbilityCastRange"				"20000"
 		"AbilityCooldown"				"30.0 26.0 22.0 18.0"
 
 		// Cost
@@ -15713,7 +15714,7 @@
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"2000 2000 2000 2000"
+		"AbilityCastRange"				"20000"
 		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
 
 		// Time		
@@ -15775,7 +15776,7 @@
 			"11"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"speed"					"800"
+				"speed"					"5000"
 			}
 			"12"
 			{
@@ -15809,7 +15810,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"radius"				"325 325 325 325"
+				"radius"				"0"
 			}
 		}
 	}
@@ -15824,6 +15825,7 @@
 		"ID"							"5336"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityCastRange"				"1600"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -15842,7 +15844,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"max_radius"			"1000 1000 1000 1000"
+				"max_radius"			"1600"
 			}			
 		}
 	}
@@ -15879,17 +15881,17 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"duration"					"5.0 6.0 7.0"
+				"duration"					"10.0 20.0 30.0"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"illusion_damage_outgoing"	"-70"
+				"illusion_damage_outgoing"	"-40"
 			}
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"tooltip_outgoing"	"30"
+				"tooltip_outgoing"	"60"
 			}
 			"04"
 			{
@@ -15949,7 +15951,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"300 300 300 300"
+		"AbilityCastRange"				"20000"
 		"AbilityCooldown"				"70.0 60.0 50.0 40.0"
 
 		// Cost
@@ -15992,7 +15994,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"600 600 600 600"
+		"AbilityCastRange"				"1600"
 		"AbilityCooldown"				"55"
 
 		// Cost
@@ -16011,7 +16013,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"radius"				"600 600 600 600"
+				"radius"				"1600"
 			}
 			"03"
 			{
@@ -16098,7 +16100,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"550 550 550"
+		"AbilityCastRange"				"20000"
 		"AbilityCooldown"				"125.0"
 
 		// Cost
@@ -16112,27 +16114,27 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"15.0"
+				"duration"				"20.0 20.0 600.0"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage"				"20 35 50"
+				"damage"				"20 35 0"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration_scepter"		"16.0"
+				"duration_scepter"		"20.0 20.0 600.0"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage_scepter"		"20 35 50"
+				"damage_scepter"		"20 35 0"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"deniable_pct"			"25 25 25"
+				"deniable_pct"			"25 25 0"
 			}
 		}
 	}
@@ -16178,7 +16180,7 @@
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"700 800 900 1000"
+		"AbilityCastRange"				"20000"
 		"AbilityCastPoint"				"0.01 0.01 0.01 0.01"
 
 		// Time		
@@ -16216,7 +16218,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"cast_range_tooltip"			"700 800 900 1000"
+				"cast_range_tooltip"			"20000"
 			}
 		}
 	}
@@ -16234,7 +16236,7 @@
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"1500 1500 1500 1500"
+		"AbilityCastRange"				"20000"
 		"AbilityCastPoint"				"0.01 0.01 0.01 0.01"
 
 		// Time		
@@ -16287,7 +16289,7 @@
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"800 800 800 800"
+		"AbilityCastRange"				"20000"
 		"AbilityCastPoint"				"0.01 0.01 0.01 0.01"
 
 		// Time		
@@ -16306,7 +16308,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"radius"				"525"
+				"radius"				"20000"
 			}
 			"02"
 			{
@@ -16364,7 +16366,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"radius_min"			"275 275 275"
+				"radius_min"			"1600"
 			}
 			"02"
 			{
@@ -16374,22 +16376,22 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"radius_max"			"1000 1000 1000"
+				"radius_max"			"1600"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"path_radius"			"275 275 275"
+				"path_radius"			"1600"
 			}
 			"05"
 			{	
 				"var_type"				"FIELD_FLOAT"
-				"frostbite_duration"	"8.0 9.0 10.0"
+				"frostbite_duration"	"20.0 20.0 20.0"
 			}
 			"06"
 			{	
 				"var_type"				"FIELD_FLOAT"
-				"dot_damage"			"12.5 20.0 32.0"
+				"dot_damage"			"5.0 10.0 20.0"
 			}
 			"07"
 			{	
@@ -16404,12 +16406,12 @@
 			"09"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"target_sight_radius"	"500 500 500"
+				"target_sight_radius"	"1600"
 			}
 			"10"
 			{	
 				"var_type"				"FIELD_FLOAT"
-				"frostbite_duration_scepter"	"17"
+				"frostbite_duration_scepter"	"30"
 			}
 		}
 	}
@@ -16473,7 +16475,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"movement_speed"		"600 650 700 750"
+				"movement_speed"		"5000"
 			}
 			"02"
 			{
@@ -16525,7 +16527,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"aura_radius"			"900 900 900 900"
+				"aura_radius"			"20000"
 			}
 			"03"
 			{
@@ -16554,7 +16556,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"1.5 1.5 1.5 1.5"
+		"AbilityCooldown"				"1.5 1.0 0.5 0.1"
 
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
@@ -16627,7 +16629,7 @@
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastPoint"				"1.2"
-		"AbilityCastRange"				"700"
+		"AbilityCastRange"				"20000"
 		"AbilityCastRangeBuffer"		"500"
 
 		// Time			
@@ -16655,17 +16657,17 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"tooltip_range"			"700"
+				"tooltip_range"			"20000"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"cast_range_scepter"	"850"
+				"cast_range_scepter"	"20000"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bash_radius_scepter"	"250 250 250"
+				"bash_radius_scepter"	"1600"
 			}
 			"06"
 			{
@@ -16690,7 +16692,7 @@
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"0"
+		"AbilityCastRange"				"1600"
 		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
 
 		// Time		
@@ -16713,7 +16715,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"shock_radius"				"385"
+				"shock_radius"				"1600"
 			}
 			"02"
 			{
@@ -16754,7 +16756,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"max_attacks"				"3 4 5 6"
+				"max_attacks"				"3 5 8 12"
 			}
 			"02"
 			{
@@ -16788,12 +16790,12 @@
 			"01"
 			{
 				"var_type"						"FIELD_FLOAT"
-				"bonus_reset_time"				"15"
+				"bonus_reset_time"				"600"
 			}
 			"02"
 			{
 				"var_type"						"FIELD_FLOAT"
-				"bonus_reset_time_roshan"		"6"
+				"bonus_reset_time_roshan"		"600"
 			}
 			"03"
 			{
@@ -16845,7 +16847,7 @@
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"duration"					"4"
+				"duration"					"4 8 12"
 			}
 			"04"
 			{
