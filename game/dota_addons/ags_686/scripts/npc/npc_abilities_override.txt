@@ -34611,7 +34611,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"radius"					"600"
+				"radius"					"1600"
 			}
 			"02"
 			{
@@ -34697,7 +34697,7 @@
 			"08"
 			{
 				"var_type"						"FIELD_FLOAT"
-				"wraith_vision_duration"				"1.0"
+				"wraith_vision_duration"				"0.5"
 			}
 		}
 	}
