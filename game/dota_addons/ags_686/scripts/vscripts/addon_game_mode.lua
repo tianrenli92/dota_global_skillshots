@@ -661,7 +661,7 @@ function CagsGameMode:EloOverallBC()
 end
 
 function CagsGameMode:StorageGet(i)
-	--Storage:Get(90020, function( resultTable, successBool )
+	--Storage:Get(90021, function( resultTable, successBool )
 	Storage:Get(PlayerResource:GetSteamAccountID(i), function( resultTable, successBool )
 		--print(successBool)
 		--DeepPrintTable(resultTable)
@@ -728,7 +728,7 @@ function CagsGameMode:StoragePut(i)
 		return nil
 	end
 	--DeepPrintTable(PlayerStorage[i+1])
-	--Storage:Put( 90020, PlayerStorage[i+1], function( resultTable, successBool )
+	--Storage:Put( 90021, PlayerStorage[i+1], function( resultTable, successBool )
 	Storage:Put( PlayerResource:GetSteamAccountID(i), PlayerStorage[i+1], function( resultTable, successBool )
     if successBool then
        --print("Successfully put data in storage")
