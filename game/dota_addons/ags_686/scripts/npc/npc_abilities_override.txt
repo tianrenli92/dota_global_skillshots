@@ -4966,7 +4966,7 @@
 			"07"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"charge_restore_time"	"45"
+				"charge_restore_time"	"30"
 			}
 		}
 	}
@@ -11648,7 +11648,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"6000"
+		"AbilityCooldown"				"115.0 115.0 115.0"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -24852,7 +24852,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"cleave_radius"			"200"
+				"cleave_radius"			"1600"
 			}
 			"05"
 			{
@@ -24862,12 +24862,12 @@
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"splash_radius"			"200"
+				"splash_radius"			"1600"
 			}
 			"07"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"aura_radius"			"1600"
+				"aura_radius"			"20000"
 			}
 		}
 	}
