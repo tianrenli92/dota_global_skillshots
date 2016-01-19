@@ -3952,7 +3952,7 @@
 			"07"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage_scepter"		"360 540 720 900"
+				"damage_scepter"		"240 360 480 600"
 			}
 		}
 	}
@@ -16046,7 +16046,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"16 12 8 4"
+		"AbilityCooldown"				"8 6 4 2"
 		"AbilityManaCost"				"40"
 		"AbilityCastRange"				"150"
 		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
@@ -20509,7 +20509,6 @@
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"FightRecapLevel"				"1"
-		"AbilityCastRange"				"1600"
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
