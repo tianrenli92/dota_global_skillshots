@@ -15686,11 +15686,6 @@
 			}
 			"02"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"cooldown_scepter"		"30"
-			}
-			"03"
-			{
 				"var_type"				"FIELD_INTEGER"
 				"ancient_creeps_scepter"		"1 2 3"
 			}
@@ -18257,7 +18252,7 @@
 		"AbilityCastRange"				"20000"
 		"AbilityCastPoint"				"0"
 		"AbilityCooldown"				"40"
-		"AbilityManaCost"				"200"
+		"AbilityManaCost"				"300"
 		"AbilityModifierSupportValue"	"0.5"	// Applies 2 modifiers
 
 		
@@ -20204,12 +20199,12 @@
 			"05"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"charge_restore_time"		"40"
+				"charge_restore_time"		"30"
 			}
 			"06"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"charge_restore_time_tooltip_scepter"		"40"
+				"charge_restore_time_tooltip_scepter"		"30"
 			}
 		}
 	}
@@ -36398,7 +36393,7 @@
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"0.5"
-		"AbilityCastRange"				"20000"
+		"AbilityCastRange"				"600"
 		"AbilityCastPoint"				"0.0"
 		
 		// Item Info
@@ -38992,7 +38987,7 @@
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"0"	
+		"ItemCost"						"550"	
 		"ItemShopTags"					""
 		
 		// Recipe
@@ -39001,7 +38996,7 @@
 		"ItemResult"					"item_aether_lens"
 		"ItemRequirements"
 		{
-			"01"						"item_energy_booster;item_ring_of_health;item_cloak"
+			"01"						"item_energy_booster;item_ring_of_health"
 		}
 	}
 	
@@ -39041,14 +39036,9 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_magical_armor"	"30"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"cast_range_bonus"			"0"
 			}
-			"05"
+			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
 				"spell_amp"				"25"
