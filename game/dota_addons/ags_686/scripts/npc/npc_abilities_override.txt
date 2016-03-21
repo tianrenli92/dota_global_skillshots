@@ -183,7 +183,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"21.0 18.0 15.0 12.0"
+		"AbilityCooldown"				"24.0 21.0 18.0 15.0"
 		
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -982,7 +982,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"duration"					"60.0"
+				"duration"					"12.0"
 			}
 			"02"
 			{
@@ -6814,12 +6814,12 @@
 			"03"
 			{
 				"var_type"						"FIELD_FLOAT"
-				"illusion_damage_out_pct"		"-50"
+				"illusion_damage_out_pct_scepter"	"50"
 			}
 			"04"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"illusion_damage_in_pct"		"50"
+				"illusion_damage_in_pct_scepter"	"150"
 			}			
 		}
 	}
@@ -13362,7 +13362,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"10"
+		"AbilityManaCost"				"30 40 50 60"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -18300,7 +18300,7 @@
 			"08"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"disarm_duration"		"1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5"
+				"disarm_duration"		"1.25 2.0 2.75 3.5 4.25 5.0 5.75 6.5"
 				"levelkey"				"wexlevel"
 			}
 		}
@@ -18671,7 +18671,7 @@
 		"ID"							"5684"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
@@ -19152,7 +19152,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"28 24 20 16"
+		"AbilityCooldown"				"38 32 26 20"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -19198,7 +19198,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"28 24 20 16"
+		"AbilityCooldown"				"38 32 26 20"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -25842,7 +25842,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"8 6 4"
+		"AbilityCooldown"				"4 3 2"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -27662,7 +27662,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"damage_duration"			"6.0"
+				"damage_duration"			"12.0"
 			}
 			"04"
 			{
@@ -37487,7 +37487,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1400"
+		"ItemCost"						"1350"
 		"ItemShopTags"					"attack_speed;move_speed;int;agi;str"
 		"ItemQuality"					"common"
 		"ItemAliases"					"power treads"
@@ -39013,7 +39013,7 @@
 	
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"2350"
+		"ItemCost"						"2300"
 		"ItemShopTags"					"int;regen_mana;move_speed;hard_to_tag"
 		"ItemQuality"					"rare"
 		"ItemAliases"					"aether lens"
@@ -39663,7 +39663,7 @@
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityManaCost"				"50"
-		"ItemCost"						"2700"
+		"ItemCost"						"2650"
 		"ItemShopTags"					"int;str;hard_to_tag;see_invis"
 		"ItemQuality"					"rare"
 		"ItemAliases"					"necronomicon 1"
@@ -39773,7 +39773,7 @@
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityManaCost"				"50"
-		"ItemCost"						"3950"
+		"ItemCost"						"3850"
 		"ItemShopTags"					"int;str;hard_to_tag;see_invis"
 		"ItemQuality"					"rare"
 		"ItemAliases"					"necronomicon 2"
@@ -39883,7 +39883,7 @@
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityManaCost"				"50"
-		"ItemCost"						"5200"
+		"ItemCost"						"5050"
 		"ItemShopTags"					"int;str;hard_to_tag;see_invis"
 		"ItemQuality"					"rare"
 		"ItemAliases"					"necronomicon 3"
@@ -40701,7 +40701,7 @@
 			"05"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"block_cooldown"		"12.0"
+				"block_cooldown"		"10.0"
 			}
 		}
 	}
@@ -41689,7 +41689,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"4525"
+		"ItemCost"						"4500"
 		"ItemShopTags"					"damage;health_regen;mana_regen;hard_to_tag"
 		"ItemQuality"					"epic"
 		"ItemAliases"					"bf;battle fury"
@@ -42030,7 +42030,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"base_attack_range"		"500"
+				"base_attack_range"		"1600"
 			}
 		}
 	}
@@ -43722,7 +43722,7 @@
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityManaCost"				"0"
-		"ItemCost"						"1350"
+		"ItemCost"						"1300"
 		"ItemShopTags"					"move_speed;boost_mana;mana_pool"
 		"ItemQuality"					"rare"
 		"ItemAliases"					"mana;mb;arcane boots"
@@ -44399,7 +44399,7 @@
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityManaCost"				"0"
-		"ItemCost"						"5300"
+		"ItemCost"						"5250"
 		"ItemShopTags"					"int;armor;regen_health;hard_to_tag"
 		"ItemQuality"					"rare"
 		"ItemAliases"					"guardian greaves"
@@ -44641,7 +44641,7 @@
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"creep_damage_pct"			"60"
+				"creep_damage_pct"			"90"
 			}
 			"06"
 			{
@@ -44910,7 +44910,7 @@
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1010"
+		"ItemCost"						"985"
 		"ItemShopTags"					""
 		"ItemQuality"					"rare"
 		"ItemAliases"					"roa;ring of aquila"
@@ -45011,7 +45011,7 @@
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1000"
+		"ItemCost"						"925"
 		"ItemShopTags"					"move_speed;regen_health;armor"
 		"ItemQuality"					"rare"
 		"ItemAliases"					"tranquil boots"
