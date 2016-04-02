@@ -480,7 +480,6 @@ function CagsGameMode:OnStateChange( event )
 		--print(FewPlayer)
 	end
 	if GameRules:State_Get() == DOTA_GAMERULES_STATE_PRE_GAME then
-		GameRules:GetGameModeEntity():SetThink( "DruidSellableThink", self, "DST", 60)	
 		--CagsGameMode:FountainChange()
 		if (WinStreakRecord) then
 			CagsGameMode:EloCalc()
@@ -850,6 +849,7 @@ function CagsGameMode:OnHeroPicked( event )
 		playerHero:AddItemByName("item_ultimate_scepter")
 		Druid_Scepter=playerHero:GetItemInSlot(0)
 		playerHero:SetCanSellItems(false)
+		GameRules:GetGameModeEntity():SetThink( "DruidSellableThink", self, "DST", 12)	
 		--print(DruidExist)
 	end
 	if heroString =="npc_dota_hero_pudge" then
@@ -1090,8 +1090,11 @@ function CagsGameMode:OnEntityKilled( event )
 				GameRules:GetGameModeEntity():SetTopBarTeamValue(DOTA_TEAM_GOODGUYS,RadiantScore)
 				RespawnPenalty[playerID+1] = RespawnPenalty[playerID+1] + 0.5
 			end
-			
-			respawnTime = respawnTime + RespawnPenalty[playerID+1]
+			if killedUnitName=="npc_dota_hero_meepo" then
+				respawnTime = respawnTime + killedUnit:GetDeaths()*0.5
+			else
+				respawnTime = respawnTime + RespawnPenalty[playerID+1]
+			end
 			respawnTime = respawnTime + killedUnit:GetKills()*0.5
 
 			if inflictName=="necrolyte_reapers_scythe" then
