@@ -2,6 +2,16 @@
 {
 	"Version"		"0"
 	"GCListVersion"		"0x0000000000000005"
+	"14193"
+	{
+		"Word"		"F_Y~P{"
+		"Filter"		"0"
+	}
+	"14192"
+	{
+		"Word"		"Y~P{"
+		"Filter"		"0"
+	}
 	"14182"
 	{
 		"Word"		"YLZIZI"
