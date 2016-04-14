@@ -12,7 +12,7 @@
 			
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"							"2100"
+		"ItemCost"							"3000"
 		"ItemQuality"						"epic"
 		"ItemStackable"					"1"
 		"ItemShareability"			"ITEM_FULLY_SHAREABLE_STACKING"
@@ -31,7 +31,7 @@
 				"ScriptFile"	"items/attr_bonus.lua"
 				"Function"		"AttrBonus"
 				"Attr"				"%bonus_attr"
-				"Cost"				"2100"
+				"Cost"				"3000"
 				"Modifier_apply" "modifier_attr_bonus"
 			}
 			"ApplyModifier"
@@ -153,13 +153,13 @@
 		"AbilityCastRange"        "20000"
 		// Stats		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"15.0"
-		"AbilityChannelTime"			"15.0"
+		"AbilityCooldown"				"12.0"
+		"AbilityChannelTime"			"12.0"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"							"1000"
-		"ItemCost"						"1900"
+		"AbilityManaCost"							"800"
+		"ItemCost"						"1825"
 		"ItemShopTags"					"move_speed;boost_mana;mana_pool"
 		"ItemQuality"					"rare"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_SPECTATORS"
@@ -260,7 +260,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_armor"			"4"
+				"bonus_armor"			"3"
 			}
 			"04"
 			{
@@ -275,7 +275,7 @@
 			"06"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"15.0"
+				"duration"				"12.0"
 			}
 			"07"
 			{
