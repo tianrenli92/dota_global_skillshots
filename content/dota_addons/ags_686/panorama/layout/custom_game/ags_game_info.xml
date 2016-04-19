@@ -36,11 +36,13 @@
 				<Image id="ItemPipe" src="file://{images}/custom_game/game_info/pipe.png" />
 			</Panel>
 			<Label id="TipText09" class="TipText" html="true" text="#addon_game_info_tips_09" />
-			<Image id="ItemHealtower" src="file://{images}/custom_game/game_info/slippers_of_halcyon.png" />
 			<Label id="TipText10" class="TipText" html="true" text="#addon_game_info_tips_10" />
-			<Image id="ItemAttrBonus" src="file://{images}/custom_game/game_info/attr_bonus.png" />
 			<Label id="TipText11" class="TipText" html="true" text="#addon_game_info_tips_11" />
-			<Image id="ItemSmoke" src="file://{images}/custom_game/game_info/smoke_of_deceit.png" />
+			<Panel style="flow-children: right;">
+				<Image id="ItemHealtower" src="file://{images}/custom_game/game_info/slippers_of_halcyon.png" />
+				<Image id="ItemAttrBonus" src="file://{images}/custom_game/game_info/attr_bonus.png" />
+				<Image id="ItemSmoke" src="file://{images}/custom_game/game_info/smoke_of_deceit.png" />
+			</Panel>
 			<Label id="TipText12" class="TipText" html="true" text="#addon_game_info_tips_12" />
 			<Label id="TipText13" class="TipText" html="true" text="#addon_game_info_tips_13" />
 			<Label id="TipText14" class="TipText" html="true" text="#addon_game_info_tips_14" />
