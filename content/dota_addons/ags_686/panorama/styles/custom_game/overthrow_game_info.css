@@ -1,6 +1,6 @@
 .OverthrowGameInfo
 {
-		margin-right: 18px;
+		margin-right: 60px;
     width:100%;
     flow-children: down;
 }
@@ -27,9 +27,9 @@ Label
 #TitleName
 {
     color: #cccccc;
-    font-size: 64px;
+    font-size: 36px;
     margin-left: 16px;
-    margin-top: 16px;
+    margin-top: 0px;
     text-transform: uppercase;
     vertical-align: center;
 }

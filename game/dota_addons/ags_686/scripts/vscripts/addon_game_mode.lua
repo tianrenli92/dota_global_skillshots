@@ -220,7 +220,12 @@ function CagsGameMode:AbandonCheckThink()
 								PlayerResource:ModifyGold(j,math.floor((PlayerResource:GetGold(j)+ItemCost)*(GCMulti-1)), false, 0)
 							end
 						end				
-						PlayerResource:ModifyGold(i,math.floor(ItemCosti/2), false, 0)
+						for k = 0, 11 do
+							if PlayerResource:GetSelectedHeroEntity(i):GetItemInSlot(k) then
+								PlayerResource:GetSelectedHeroEntity(i):RemoveItem(PlayerResource:GetSelectedHeroEntity(i):GetItemInSlot(k))
+							end
+						end									
+						PlayerResource:ModifyGold(i,math.floor(ItemCosti), false, 0)
 						--GameRules:SendCustomMessage("%s1 abandoned. All radiant players' gold, GPM and respawn speed become "..((math.floor(RadiantGC*100))/100).."x.", i, 0)				
 	  				Notifications:BottomToAll({hero=PlayerResource:GetSelectedHeroName(i), imagestyle="landscape", duration=10.0})
 	  				Notifications:BottomToAll({text="#addon_abandon_radiant_01", continue=true, style={["font-size"]="30px"}})

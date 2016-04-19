@@ -22,10 +22,25 @@
 			<Label id="TipText05" class="TipText" html="true" text="#addon_game_info_tips_05" />
 			<Label id="TipText06" class="TipText" html="true" text="#addon_game_info_tips_06" />
 			<Label id="TipText07" class="TipText" html="true" text="#addon_game_info_tips_07" />
+			<Panel style="flow-children: right;">
+				<Image id="ItemVlad"  src="file://{images}/custom_game/game_info/vladmir.png" />
+				<Image id="ItemMekansm" src="file://{images}/custom_game/game_info/mekansm.png" />
+				<Image id="ItemAssault" src="file://{images}/custom_game/game_info/assault.png" />
+				<Image id="ItemShivasGuard" src="file://{images}/custom_game/game_info/shivas_guard.png" />
+			</Panel>
 			<Label id="TipText08" class="TipText" html="true" text="#addon_game_info_tips_08" />
+			<Panel style="flow-children: right;">
+				<Image id="ItemCloak"  src="file://{images}/custom_game/game_info/cloak.png" />
+				<Image id="ItemCape" src="file://{images}/custom_game/game_info/glimmer_cape.png" />
+				<Image id="ItemHood" src="file://{images}/custom_game/game_info/hood_of_defiance.png" />
+				<Image id="ItemPipe" src="file://{images}/custom_game/game_info/pipe.png" />
+			</Panel>
 			<Label id="TipText09" class="TipText" html="true" text="#addon_game_info_tips_09" />
+			<Image id="ItemHealtower" src="file://{images}/custom_game/game_info/slippers_of_halcyon.png" />
 			<Label id="TipText10" class="TipText" html="true" text="#addon_game_info_tips_10" />
+			<Image id="ItemAttrBonus" src="file://{images}/custom_game/game_info/attr_bonus.png" />
 			<Label id="TipText11" class="TipText" html="true" text="#addon_game_info_tips_11" />
+			<Image id="ItemSmoke" src="file://{images}/custom_game/game_info/smoke_of_deceit.png" />
 			<Label id="TipText12" class="TipText" html="true" text="#addon_game_info_tips_12" />
 			<Label id="TipText13" class="TipText" html="true" text="#addon_game_info_tips_13" />
 			<Label id="TipText14" class="TipText" html="true" text="#addon_game_info_tips_14" />
