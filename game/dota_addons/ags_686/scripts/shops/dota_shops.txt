@@ -25,7 +25,6 @@
 
 	"attributes"
 	{
-		//"item"		"item_banana"	
 		//"item"		"item_telescope"	
 		//"item"		"item_sturdy_vest"	
 		"item"		"item_branches"
@@ -45,6 +44,7 @@
 		"item"		"item_staff_of_wizardry"
 		"item"		"item_attr_bonus"		
 		"item"		"item_slippers_of_halcyon"
+		"item"		"item_banana"	
 	}
 
 	"weapons_armor"
