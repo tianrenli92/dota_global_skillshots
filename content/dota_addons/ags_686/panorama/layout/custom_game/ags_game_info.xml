@@ -30,7 +30,7 @@
 			</Panel>
 			<Label id="TipText08" class="TipText" html="true" text="#addon_game_info_tips_08" />
 			<Panel style="flow-children: right;">
-				<Image id="ItemCloak"  src="file://{images}/custom_game/game_info/cloak.png" />
+				<Image id="ItemCloak"  src="file://{images}/custom_game/game_info/infused_raindrop.png" />
 				<Image id="ItemCape" src="file://{images}/custom_game/game_info/glimmer_cape.png" />
 				<Image id="ItemHood" src="file://{images}/custom_game/game_info/hood_of_defiance.png" />
 				<Image id="ItemPipe" src="file://{images}/custom_game/game_info/pipe.png" />

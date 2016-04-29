@@ -958,6 +958,8 @@ function CagsGameMode:OnPlayerUseAbility( event )
 	local playerHero = player:GetAssignedHero()
 	local playerName = playerHero:GetUnitName()
 
+  --DeepPrintTable(event)
+  
 --[[	--Abandon simulation
 	PlayerTeam[2+CountN]=2
 	AbandonTest[2+CountN]=true
@@ -1008,6 +1010,10 @@ function CagsGameMode:OnPlayerUseAbility( event )
 		GameRules:GetGameModeEntity():SetThink( "PudgeSuicideThink", self, "PST", 0.2)
 	end
 	]]
+	
+	if (abilityName=="item_banana") then
+		playerHero:ModifyIntellect(-4)
+	end
 	
 	if (abilityName=="pudge_meat_hook") and (playerName=="npc_dota_hero_pudge") and not(PudgeAbandon) then
 		PudgeHookSum = PudgeHookSum + 1
