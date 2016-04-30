@@ -15635,7 +15635,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage_max"			"200 400 600 800"
+				"damage_max"			"150 300 450 600"
 			}
 		}
 	}
@@ -16179,22 +16179,22 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"30.0"
+				"duration"				"30.0 30.0 600.0"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage"				"20 35 50"
+				"damage"				"20 35 0"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration_scepter"		"45.0 60.0 600.0"
+				"duration_scepter"		"30.0 30.0 600.0"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage_scepter"		"0"
+				"damage_scepter"		"40 70 0"
 			}
 			"05"
 			{
@@ -23779,7 +23779,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"60 30 15"
+		"AbilityCooldown"				"45 30 15"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -24065,7 +24065,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"duration"					"4.0 5.5 7.0"
+				"duration"					"4.0 6.0 8.0"
 			}
 			"02"
 			{
@@ -36331,7 +36331,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"restore_per_charge"	"15"
+				"restore_per_charge"	"30"
 			}
 		}
 	}
@@ -36463,7 +36463,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"hp_regen"		"1.0"
+				"hp_regen"		"2.0"
 			}
 			"02"
 			{
@@ -36613,18 +36613,18 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"health_restore"		"900"
+				"health_restore"		"360"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"mana_restore"			"600"
+				"mana_restore"			"240"
 			}
 			
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"restore_time"			"25"
+				"restore_time"			"10"
 			}
 			"04"
 			{
@@ -38141,12 +38141,12 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"slide_distance"		"5000"
+				"slide_distance"		"1600"
 			}
 			"02"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"slide_duration"		"1.0"
+				"slide_duration"		"3.0"
 			}
 			"03"
 			{
@@ -38882,7 +38882,7 @@
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"soul_additional_charges"	"1"
+				"soul_additional_charges"	"2"
 			}
 			"06"
 			{
@@ -39529,7 +39529,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"spell_amp"				"20"
+				"spell_amp"				"15"
 			}
 		}
 	}
@@ -43815,7 +43815,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"berserk_bonus_attack_speed"	"100"
+				"berserk_bonus_attack_speed"	"150"
 			}
 			"03"
 			{
@@ -43830,7 +43830,7 @@
 			"05"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"berserk_duration"		"18.0"
+				"berserk_duration"		"600.0"
 			}
 		}
 	}
