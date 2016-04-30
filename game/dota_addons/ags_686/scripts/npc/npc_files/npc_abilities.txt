@@ -5997,7 +5997,7 @@
 			"05"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus_range_scepter"		"107"
+				"bonus_range_scepter"		"85"
 			}
 			"06"
 			{
@@ -7535,7 +7535,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"44 36 28 20"
+		"AbilityCooldown"				"60 50 40 30"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -7548,7 +7548,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"health_conversion"		"25 40 55 70"
+				"health_conversion"		"30 50 70 90"
 			}
 		}
 	}
@@ -11725,7 +11725,7 @@
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus_attack_range"		"372 372 372"
+				"bonus_attack_range"		"350"
 			}
 			"04"
 			{
@@ -14635,7 +14635,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_movespeed"		"-25 -27 -29 -31"
+				"bonus_movespeed"		"-18 -22 -26 -30"
 			}
 			"03"
 			{

@@ -1083,10 +1083,12 @@ function CagsGameMode:OnEntityKilled( event )
 	local attackUnitName = attackUnit:GetUnitName()
 	local attackUnitTeam = attackUnit:GetTeam()
 	local inflictName = "wtf"
+	local inflictLevel = -1
 	--print(killedUnitTeam, killedUnitName, "killed",attackUnitTeam, attackUnitName, "attack")
 	if event.entindex_inflictor~=void then
 		inflictName = EntIndexToHScript( event.entindex_inflictor ):GetName()
-		--print (inflictName)
+		inflictLevel = EntIndexToHScript( event.entindex_inflictor ):GetLevel()
+		--print (inflictName,inflictLevel)
 	end
 	if killedUnit:IsRealHero() then
 		--print("Hero has been killed")
@@ -1114,7 +1116,7 @@ function CagsGameMode:OnEntityKilled( event )
 			respawnTime = respawnTime + killedUnit:GetKills()*0.5
 
 			if inflictName=="necrolyte_reapers_scythe" then
-				respawnTime = respawnTime + 15
+				respawnTime = respawnTime + 5 * inflictLevel
 			end
 
 			if (TechiesSuicide == true) and (killedUnitName == "npc_dota_hero_techies") then
