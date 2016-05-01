@@ -1343,7 +1343,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"5.0"
+		"AbilityCooldown"				"15.0"
 		"AbilityDuration"				"14.0 14.0 14.0 14.0"
 
 		// Damage.
@@ -1361,7 +1361,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"totem_damage_percentage"	"150 300 450 600"
+				"totem_damage_percentage"	"300 500 700 900"
 			}
 			"02"
 			{
@@ -38124,7 +38124,7 @@
 		"ItemStackable"					"1"
 		"ItemPurchasable"				"1"
 		"ItemPermanent"					"0"
-		"ItemInitialCharges"			"10"
+		"ItemInitialCharges"			"20"
 		"ItemDisplayCharges"			"1"
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
 		
@@ -38146,12 +38146,12 @@
 			"02"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"slide_duration"		"3.0"
+				"slide_duration"		"2.0"
 			}
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"radius"			"150"
+				"radius"			"100"
 			}
 		}
 	}
