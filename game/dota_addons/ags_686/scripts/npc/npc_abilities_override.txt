@@ -8976,7 +8976,7 @@
 			"07"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"respawn_constant"		"10 20 30"
+				"respawn_constant"		"5 10 15"
 			}
 		}
 	}
@@ -16166,7 +16166,7 @@
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"20000"
-		"AbilityCooldown"				"125.0"
+		"AbilityCooldown"				"90.0"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -19500,7 +19500,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"5.0"
+		"AbilityCooldown"				"0.1"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -35281,7 +35281,7 @@
 		"SideShop"					"0"
 		"ItemStackable"					"0"
 		"ItemPermanent"					"0"
-		"ItemInitialCharges"				"15"
+		"ItemInitialCharges"				"10"
 		"SideShop"					"0"
 		"ItemHideCharges"				"0"
 		"ItemStockTime"					"1"			  
@@ -35317,7 +35317,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"magic_damage_block"	"120"
+				"magic_damage_block"	"180"
 			}
 			"05"
 			{
@@ -38151,7 +38151,7 @@
 			"02"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"slide_duration"		"2.0"
+				"slide_duration"		"1.0"
 			}
 			"03"
 			{
@@ -41209,7 +41209,7 @@
 			"09"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"respawn_time_reduction"	"3"
+				"respawn_time_reduction"	"0"
 			}
 			"10"
 			{
@@ -42241,7 +42241,7 @@
 			"05"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"bash_duration"			"2.1"
+				"bash_duration"			"1.4"
 			}
 			"06"
 			{
@@ -45062,7 +45062,7 @@
 			"09"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"resist_debuff_duration"	"16.0"
+				"resist_debuff_duration"	"24.0"
 			}
 		}
 	}
@@ -45467,7 +45467,7 @@
 			"09"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"bash_duration"			"2.1"
+				"bash_duration"			"1.4"
 			}
 			"10"
 			{
@@ -45667,7 +45667,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"10"
+				"bonus_damage"			"15"
 			}
 			"02"
 			{

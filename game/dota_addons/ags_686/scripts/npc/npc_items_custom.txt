@@ -88,7 +88,7 @@
 		"ItemCost"							"100"
 		"ItemQuality"						"consumable"
 		"ItemStackable"					"0"
-		//"ItemShareability"			"ITEM_FULLY_SHAREABLE_STACKING"
+		"ItemShareability"			"ITEM_FULLY_SHAREABLE_STACKING"
 		"ItemPermanent"					"0"
 		"ItemInitialCharges"		"1"
 		"ItemKillable"          "0"
