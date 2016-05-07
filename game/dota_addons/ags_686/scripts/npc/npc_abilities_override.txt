@@ -5555,7 +5555,7 @@
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"17.0 15.0 13.0 11.0"
+		"AbilityCooldown"				"21.0 18.0 15.0 12.0"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -6317,7 +6317,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"8.0 8.0 8.0 8.0"
+		"AbilityCooldown"				"8"
 		"AbilityDuration"				"1.6 1.9 2.2 2.5"
 
 		// Damage.
@@ -9546,7 +9546,7 @@
 		"ID"					"5171"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -10698,7 +10698,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"base_damage"			"60"
+				"base_damage"			"75"
 			}
 			"05"
 			{
@@ -10733,7 +10733,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"18 16 14 12"
+		"AbilityCooldown"				"21 18 15 12"
 
 		// Duration
 		//-------------------------------------------------------------------------------------------------------------
@@ -13867,7 +13867,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"150 200 250"
+		"AbilityManaCost"				"150"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -14655,12 +14655,12 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_movespeed"		"-18 -22 -26 -30"
+				"bonus_movespeed"		"-15 -20 -25 -30"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_attackspeed"		"-25 -27 -29 -31"
+				"bonus_attackspeed"		"-15 -20 -25 -30"
 			}
 			"04"
 			{
@@ -16122,7 +16122,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"burn_damage"			"40"
+				"burn_damage"			"25 30 35 40"
 			}
 			"02"
 			{
@@ -28106,12 +28106,12 @@
 			"04"
 			{
 				"var_type"							"FIELD_FLOAT"
-				"illusion_incoming_damage"			"325.0"
+				"illusion_incoming_damage"			"300.0"
 			}
 			"05"
 			{
 				"var_type"							"FIELD_FLOAT"
-				"illusion_incoming_damage_total_tooltip"			"425.0"
+				"illusion_incoming_damage_total_tooltip"			"400.0"
 			}	
 		}
 	}
@@ -28155,7 +28155,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"base_attack_time"		"1.6"
+				"base_attack_time"		"1.5"
 			}
 			"04"
 			{
@@ -35327,7 +35327,7 @@
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"initial_charges"		"15"
+				"initial_charges"		"10"
 			}
 		}
 	}
@@ -35347,12 +35347,11 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"225"
+		"ItemCost"						"235"
 		"ItemShopTags"					"armor"
 		"ItemQuality"					"component"
 		"ItemAliases"					"wind lace"
 		"ItemPermanent"					"1"
-		"SideShop"						"1"
 		//"ItemInitialCharges"			"3"
 		//"ItemRequiresCharges"			"1"
 
@@ -39430,7 +39429,7 @@
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityManaCost"				"175"
-		"ItemCost"						"2725"
+		"ItemCost"						"2735"
 		"ItemShopTags"					"int;regen_mana;move_speed;hard_to_tag"
 		"ItemQuality"					"rare"
 		"ItemAliases"					"cyclone euls;eul's scepter of divinity"
@@ -42730,7 +42729,7 @@
 			"08"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"unholy_bonus_armor"	"5"
+				"unholy_bonus_armor"	"4"
 			}
 			"09"
 			{
@@ -42847,7 +42846,7 @@
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"0"	
+		"ItemCost"						"300"	
 		"ItemShopTags"					""
 		
 		// Recipe
@@ -42880,7 +42879,7 @@
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityManaCost"				"75"
-		"ItemCost"						"4800"
+		"ItemCost"						"5100"
 		"ItemShopTags"					"damage;attack_speed;movespeed;hard_to_tag"
 		"ItemQuality"					"epic"
 		"ItemAliases"					"sb;invis;shadow blade"
@@ -44590,7 +44589,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1775"
+		"ItemCost"						"1785"
 		"ItemShopTags"					"str;agi;int;damage;move_speed;attack_speed;hard_to_tag"
 		"ItemQuality"					"rare"
 		"ItemAliases"					"drum of endurance"

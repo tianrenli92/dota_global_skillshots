@@ -1077,9 +1077,11 @@ function CagsGameMode:OnEntityKilled( event )
 	--DeepPrintTable(event)
 	--print (event.entindex_attacker:GetName())
 	local killedUnit = EntIndexToHScript( event.entindex_killed )
+	if killedUnit:IsClone() then killedUnit = killedUnit:GetCloneSource() end
 	local killedUnitName = killedUnit:GetUnitName()
 	local killedUnitTeam = killedUnit:GetTeam()
 	local attackUnit = EntIndexToHScript( event.entindex_attacker )
+	if attackUnit:IsClone() then attackUnit = attackUnit:GetCloneSource() end
 	local attackUnitName = attackUnit:GetUnitName()
 	local attackUnitTeam = attackUnit:GetTeam()
 	local inflictName = "wtf"
