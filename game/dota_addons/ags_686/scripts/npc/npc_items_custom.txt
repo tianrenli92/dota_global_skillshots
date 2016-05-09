@@ -23,6 +23,7 @@
 		"ItemDroppable"         "1"
 		"ItemPurchasable"				"1"
 		"ItemAlertable"					"1"
+		"AbilityManaCost"				"5"
 	 
 		"OnSpellStart"
 		{
@@ -96,6 +97,7 @@
 		"ItemDroppable"         "1"
 		"ItemPurchasable"				"1"
 		"ItemAlertable"					"1"
+		"AbilityManaCost"				"5"
 	 
 		"OnSpellStart"
 		{

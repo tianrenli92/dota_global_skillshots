@@ -354,7 +354,7 @@ end
 function CagsGameMode:RespawnRadiantPlayers()
 	for i = 0, 31 do
 		if (PlayerTeam[i+1]==2) then
-			playerHero = PlayerResource:GetPlayer(i):GetAssignedHero()
+			playerHero = PlayerResource:GetSelectedHeroEntity(i)
 			if not(playerHero:IsAlive()) then
 				playerHero:SetTimeUntilRespawn(1)
 			end
@@ -365,7 +365,7 @@ end
 function CagsGameMode:RespawnDirePlayers()
 	for i = 0, 31 do
 		if (PlayerTeam[i+1]==3) then
-			playerHero = PlayerResource:GetPlayer(i):GetAssignedHero()
+			playerHero = PlayerResource:GetSelectedHeroEntity(i)
 			if not(playerHero:IsAlive()) then
 				playerHero:SetTimeUntilRespawn(1)
 			end
