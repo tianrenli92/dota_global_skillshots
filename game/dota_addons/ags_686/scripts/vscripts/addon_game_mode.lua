@@ -34,6 +34,7 @@ end
 
 function CagsGameMode:InitGameMode()
 	print( "ags is loaded." )
+	
 	Storage:SetApiKey("fc80985d01e14165c9ca9d03848eaecd58d3ede3")
 	CountN = 0
 	TooltipReport = false
@@ -84,6 +85,7 @@ function CagsGameMode:InitGameMode()
 	Convars:RegisterCommand("test_fastend", function(wtfnoobnil, num) if PlayerResource:GetSteamAccountID(Convars:GetCommandClient():GetPlayerID()) == 161697269 and num then CagsGameMode:FastEnd(tonumber(num)) end end, "Fast end test. 2/3 for rad/dire.", 0)
 	Convars:RegisterCommand("test_changeelo", function(wtfnoobnil, num) if PlayerResource:GetSteamAccountID(Convars:GetCommandClient():GetPlayerID()) == 161697269 and num then CagsGameMode:EloChange(0,tonumber(num)) end end, "Adjust elo.", 0)
 	Convars:RegisterCommand("test_printmodifiers", function(wtfnoobnil, num) if PlayerResource:GetSteamAccountID(Convars:GetCommandClient():GetPlayerID()) == 161697269 and num then CagsGameMode:PrintModifiers(tonumber(num)) end end, "Print modifiers.", 0)
+	Convars:RegisterCommand("test_abandonsimulation", function(wtfnoobnil) if PlayerResource:GetSteamAccountID(Convars:GetCommandClient():GetPlayerID()) == 161697269 then CagsGameMode:AbandonSimulation() end end, "Abandon Simulation.", 0)
 
 	GameRules:GetGameModeEntity():SetThink( "HeroSelectionThink", self, "HST")
 	GameRules:GetGameModeEntity():SetThink( "AbandonCheckThink", self, "ACT")
@@ -232,10 +234,14 @@ function CagsGameMode:AbandonCheckThink()
 	  				Notifications:BottomToAll({text=""..((math.floor(RadiantGC*100))/100), continue=true, style={["font-size"]="30px"}})
 	  				Notifications:BottomToAll({text="#addon_abandon_radiant_02", continue=true, style={["font-size"]="30px"}})
 						RadiantPlayersNow = RadiantPlayersNow - 1
+						if RadiantPlayersNow<0 then
+							RadiantPlayersNow=0
+						end
 											
 						if RadiantPlayersNow==0 and not(MegaAutoSpawn) then
 							MegaAutoSpawn = true
 							CagsGameMode:DestroyRadiantBarracks()
+							CagsGameMode:RespawnRadiantPlayers()
 						end
 						
 					else
@@ -270,10 +276,14 @@ function CagsGameMode:AbandonCheckThink()
 	  				Notifications:BottomToAll({text=""..((math.floor(DireGC*100))/100), continue=true, style={["font-size"]="30px"}})
 	  				Notifications:BottomToAll({text="#addon_abandon_dire_02", continue=true, style={["font-size"]="30px"}})
 						DirePlayersNow = DirePlayersNow - 1
+						if DirePlayersNow<0 then
+							DirePlayersNow=0
+						end
 						
 						if DirePlayersNow==0 and not(MegaAutoSpawn) then
 							MegaAutoSpawn = true
 							CagsGameMode:DestroyDireBarracks()
+							CagsGameMode:RespawnDirePlayers()
 						end
 
 					end
@@ -338,6 +348,28 @@ function CagsGameMode:DestroyDireBarracks()
 	RaxDestroy=Entities:FindAllByName("bad_rax_range_bot")
 	for k,ent in pairs(RaxDestroy) do
 		ent:ForceKill(false)
+	end
+end
+
+function CagsGameMode:RespawnRadiantPlayers()
+	for i = 0, 31 do
+		if (PlayerTeam[i+1]==2) then
+			playerHero = PlayerResource:GetPlayer(i):GetAssignedHero()
+			if not(playerHero:IsAlive()) then
+				playerHero:SetTimeUntilRespawn(1)
+			end
+		end
+	end
+end
+
+function CagsGameMode:RespawnDirePlayers()
+	for i = 0, 31 do
+		if (PlayerTeam[i+1]==3) then
+			playerHero = PlayerResource:GetPlayer(i):GetAssignedHero()
+			if not(playerHero:IsAlive()) then
+				playerHero:SetTimeUntilRespawn(1)
+			end
+		end
 	end
 end
 
@@ -951,6 +983,13 @@ function CagsGameMode:PudgeCancelBackswingThink()
 	return nil
 end
 
+function CagsGameMode:AbandonSimulation()
+	PlayerTeam[2+CountN]=2
+	AbandonTest[2+CountN]=true
+	if CountN == 0 then RadiantPlayers=5 RadiantPlayersNow=5 RadiantGC=1 end
+	CountN = CountN + 1
+end
+
 function CagsGameMode:OnPlayerUseAbility( event )
 
 	local abilityName = event.abilityname
@@ -960,12 +999,6 @@ function CagsGameMode:OnPlayerUseAbility( event )
 
   --DeepPrintTable(event)
   
---[[	--Abandon simulation
-	PlayerTeam[2+CountN]=2
-	AbandonTest[2+CountN]=true
-	if CountN == 0 then RadiantPlayers=5 RadiantPlayersNow=5 RadiantGC=1 end
-	CountN = CountN + 1
-]]
 --[[	--Storage test
 	TableUpload={CountN}
 	--TableUpload={PlayerResource:GetSteamAccountID(0)}
@@ -1126,22 +1159,22 @@ function CagsGameMode:OnEntityKilled( event )
 					TechiesSuicide = false
 			end
 
-			if killedUnitTeam==DOTA_TEAM_GOODGUYS then
+			if (killedUnitTeam==DOTA_TEAM_GOODGUYS) and (RadiantPlayersNow~=0) then
 				respawnTime = respawnTime*(RadiantPlayersNow/5)^0.5			
 			end
-			if killedUnitTeam==DOTA_TEAM_BADGUYS then
+			if (killedUnitTeam==DOTA_TEAM_BADGUYS) and (DirePlayersNow~=0) then
 				respawnTime = respawnTime*(DirePlayersNow/5)^0.5			
 			end
 			respawnTime = math.floor(respawnTime)
 			if respawnTime ==0 then
 				respawnTime = 1
 			end
-			if PlayerAbandon[playerID+1]==false then
+			if (PlayerAbandon[playerID+1]==false) or (MegaAutoSpawn) then
 				killedUnit:SetTimeUntilRespawn(respawnTime)
 			else
 				killedUnit:SetTimeUntilRespawn(300)		
 			end
-			if _G.AbandonTest[playerID+1] then
+			if (_G.AbandonTest[playerID+1]) and not(MegaAutoSpawn) then
   			Notifications:BottomToAll({hero=PlayerResource:GetSelectedHeroName(playerID), imagestyle="landscape", duration=10.0})
   			Notifications:BottomToAll({text="#addon_abandon_and_spectate", continue=true, style={["font-size"]="30px"}})
 				killedUnit:SetTimeUntilRespawn(9999)

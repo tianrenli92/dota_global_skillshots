@@ -913,12 +913,12 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus_movement_speed"		"10 20 40 80"
+				"bonus_movement_speed"		"30 60 90 120"
 			}			
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus_damage"				"10 20 40 80"
+				"bonus_damage"				"30 60 90 120"
 			}		
 			"04"
 			{
@@ -6286,7 +6286,7 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus_damage"				"15"
+				"bonus_damage"				"15 10 5 0"
 			}
 			"03"
 			{
@@ -8717,7 +8717,7 @@
 			"01"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"bonus_attack_range"			"800 1600 3200 5000"
+				"bonus_attack_range"			"1600 3200 5000 10000"
 			}
 		}
 	}
@@ -24722,7 +24722,7 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"strength_pct"				"30 50 70 90"
+				"strength_pct"				"30 45 60 75"
 			}
 		}
 	}
@@ -38117,6 +38117,7 @@
 		"AbilityCastPoint"				"0"
 		//"AbilityCastRange"				"2000"
 		"AbilityCooldown"				"0.0"
+		"AbilityManaCost"				"5"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
