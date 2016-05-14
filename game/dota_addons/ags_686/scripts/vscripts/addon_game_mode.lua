@@ -101,6 +101,7 @@ function CagsGameMode:InitGameMode()
 	GameRules:GetGameModeEntity():SetTopBarTeamValue(DOTA_TEAM_GOODGUYS,RadiantScore)
 	GameRules:GetGameModeEntity():SetTopBarTeamValue(DOTA_TEAM_BADGUYS,DireScore)
 	GameRules:GetGameModeEntity():SetCameraDistanceOverride(1350)
+	--GameRules:GetGameModeEntity():SetCustomBuybackCooldownEnabled(true)
 	
 	ListenToGameEvent( "player_connect", Dynamic_Wrap( CagsGameMode, 'OnPlayerConnect' ), self )
 	ListenToGameEvent( "game_rules_state_change", Dynamic_Wrap( CagsGameMode, 'OnStateChange' ), self )
@@ -478,6 +479,7 @@ function CagsGameMode:OnStateChange( event )
 		--CustomUI:DynamicHud_Create(-1,"MyUIButton","file://{resources}/layout/custom_game/rank_info.xml",nil)
 		for i = 0, 31 do
 			PlayerTeam[i+1] = PlayerResource:GetTeam(i)
+			--PlayerResource:SetCustomBuybackCooldown(i,210)
 			--print(PlayerTeam[i+1])
 			if (PlayerTeam[i+1]== 2) then
 				RadiantPlayers = RadiantPlayers + 1
@@ -523,6 +525,7 @@ function CagsGameMode:OnStateChange( event )
 	end
 	if GameRules:State_Get() == DOTA_GAMERULES_STATE_PRE_GAME then
 		--CagsGameMode:FountainChange()
+						
 		if (WinStreakRecord) then
 			CagsGameMode:EloCalc()
 			for i = 0,31 do
@@ -1178,6 +1181,7 @@ function CagsGameMode:OnEntityKilled( event )
   			Notifications:BottomToAll({hero=PlayerResource:GetSelectedHeroName(playerID), imagestyle="landscape", duration=10.0})
   			Notifications:BottomToAll({text="#addon_abandon_and_spectate", continue=true, style={["font-size"]="30px"}})
 				killedUnit:SetTimeUntilRespawn(9999)
+				killedUnit:SetBuybackCooldownTime(9999)
 			end
 			
 			if HostQualityPunish and (playerID==PlayerHost)then

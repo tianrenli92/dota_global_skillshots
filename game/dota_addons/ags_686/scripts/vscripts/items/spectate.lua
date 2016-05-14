@@ -12,7 +12,6 @@ function SpectateAndAbandon(keys)
 			end
 		end
 		PlayerResource:ModifyGold(i,math.floor(itemCost)+100, false, 0)
-		PlayerResource:SetBuybackCooldownTime(i,9999)
 		hero:SetMana(0)
 		hero:ForceKill(false)
 	end

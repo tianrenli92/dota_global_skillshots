@@ -1176,7 +1176,7 @@
 			"06"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"knockback_duration"		"0.6 0.7 0.8 0.9"
+				"knockback_duration"		"0.9 1.2 1.5 1.8"
 			}
 			"07"
 			{
@@ -1361,7 +1361,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"totem_damage_percentage"	"300 500 700 900"
+				"totem_damage_percentage"	"300 600 900 1200"
 			}
 			"02"
 			{
@@ -6145,7 +6145,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"sight_duration"		"2"
+				"sight_duration"		"1.5"
 			}
 			"05"
 			{
@@ -6242,7 +6242,7 @@
 			"05"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"sight_duration"		"10.0"
+				"sight_duration"		"5.0"
 			}
 			"06"
 			{
@@ -7992,7 +7992,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"24 20 16 12"
+		"AbilityCooldown"				"24 21 18 15"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -24095,7 +24095,7 @@
 			"06"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"neutral_disable"			"2.0 2.0 2.0"
+				"neutral_disable"			"0"
 			}
 			"07"
 			{
