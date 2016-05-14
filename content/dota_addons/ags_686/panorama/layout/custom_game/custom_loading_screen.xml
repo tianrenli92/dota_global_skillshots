@@ -38,8 +38,8 @@
       <Label id="AddonCredit_14" text="#addon_credit_14" style="" />
       <Label id="AddonCredit_15" text="#addon_credit_15" style="" />
       <Label id="AddonCredit_16" text="#addon_credit_16" style="" />
-      <Label id="AddonCredit_newplayer_01" text="#addon_credit_newplayer_01" style="color: #ec5355;" />
-      <Label id="AddonCredit_newplayer_02" text="#addon_credit_newplayer_02" style="color: #ec5355;" />
+      <Label id="AddonCredit_newplayer_01" text="#addon_credit_newplayer_01" style="color: #ff0303;font-weight: bold;font-size: 35px;" />
+      <Label id="AddonCredit_newplayer_02" text="#addon_credit_newplayer_02" style="color: #ff0303;font-weight: bold;font-size: 35px;" />
     </Panel>
   </Panel>
 </root>
