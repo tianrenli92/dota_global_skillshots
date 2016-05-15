@@ -23756,10 +23756,12 @@
 			"04"
 			{
 				"var_type"					"FIELD_FLOAT"
+				"drain_pct"					"0.02"
 			}
 			"05"
 			{
 				"var_type"					"FIELD_FLOAT"
+				"drain_pct_tooltip"			"2"
 			}
 		}
 	}	
