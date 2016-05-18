@@ -34647,7 +34647,7 @@
 			"01"
 			{	
 				"var_type"			"FIELD_INTEGER"
-				"radius"			"1600"
+				"radius"			"20000"
 			}
 			"02"
 			{
@@ -34667,7 +34667,7 @@
 			"05"
 			{	
 				"var_type"			"FIELD_FLOAT"
-				"duration"			"4.0 8.0 12.0"
+				"duration"			"4.0 6.0 8.0"
 			}
 		}
 	}
