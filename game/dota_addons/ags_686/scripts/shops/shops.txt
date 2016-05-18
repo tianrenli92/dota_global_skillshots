@@ -1,4 +1,4 @@
-	"dota_shops"
+"dota_shops"
 {
 	"consumables"
 	{
@@ -25,6 +25,7 @@
 
 	"attributes"
 	{
+		//"item"		"item_banana"	
 		//"item"		"item_telescope"	
 		//"item"		"item_sturdy_vest"	
 		"item"		"item_branches"
@@ -42,9 +43,13 @@
 		"item"		"item_ogre_axe"
 		"item"		"item_blade_of_alacrity"
 		"item"		"item_staff_of_wizardry"
-		"item"		"item_attr_bonus"		
-		"item"		"item_slippers_of_halcyon"
-		"item"		"item_banana"	
+		"item"		"item_river_painter7"	
+		"item"		"item_river_painter6"	
+		"item"		"item_river_painter5"	
+		"item"		"item_river_painter4"	
+		"item"		"item_river_painter3"	
+		"item"		"item_river_painter2"	
+		"item"		"item_river_painter"	
 	}
 
 	"weapons_armor"
@@ -102,7 +107,6 @@
 		"item"		"item_hand_of_midas"
 		"item"		"item_travel_boots"		
 		"item"		"item_moon_shard"					
- 		"item"		"item_spectate_game"		
 	}
 
 	// Level 2 - Blue Recipes
@@ -212,7 +216,6 @@
 	"sideshop1"
 	{
 		"item"		"item_tpscroll"
-
 		"item"		"item_magic_stick"
 		"item"		"item_orb_of_venom"
 		"item"		"item_sobi_mask"
