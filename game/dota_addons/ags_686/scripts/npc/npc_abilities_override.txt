@@ -34557,7 +34557,7 @@
 			"07"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"secondary_projectile_speed"		"650"
+				"secondary_projectile_speed"		"5000"
 			}
 		}
 	}
@@ -34667,7 +34667,7 @@
 			"05"
 			{	
 				"var_type"			"FIELD_FLOAT"
-				"duration"			"4.0 6.0 8.0"
+				"duration"			"4.0 8.0 12.0"
 			}
 		}
 	}
