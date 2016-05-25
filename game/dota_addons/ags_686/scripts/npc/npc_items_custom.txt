@@ -155,12 +155,12 @@
 		"AbilityCastRange"        "20000"
 		// Stats		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"12.0"
-		"AbilityChannelTime"			"12.0"
+		"AbilityCooldown"				"9.0"
+		"AbilityChannelTime"			"9.0"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"							"800"
+		"AbilityManaCost"							"600"
 		"ItemCost"						"1825"
 		"ItemShopTags"					"move_speed;boost_mana;mana_pool"
 		"ItemQuality"					"rare"
@@ -277,7 +277,7 @@
 			"06"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"12.0"
+				"duration"				"9.0"
 			}
 			"07"
 			{
