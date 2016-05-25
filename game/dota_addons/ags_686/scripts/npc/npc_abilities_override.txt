@@ -14144,7 +14144,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"health_cost_percent"		"0.3 0.15 0"
+				"health_cost_percent"		"0.35"
 			}
 			"02"
 			{
@@ -14169,7 +14169,7 @@
 			"06"
 			{
 				"var_type"							"FIELD_INTEGER"
-				"tooltip_health_cost_percent"		"30 15 0"
+				"tooltip_health_cost_percent"		"35"
 			}
 			"07"
 			{
@@ -14189,7 +14189,7 @@
 			"10"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"cooldown_scepter"			"2"
+				"cooldown_scepter"			"3"
 			}
 		}
 	}
