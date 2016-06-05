@@ -9675,7 +9675,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_attack_speed"	"15 25 35 45"
+				"bonus_attack_speed"	"8 16 24 32"
 			}
 		}
 	}
@@ -11291,7 +11291,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"duration"					"30.0"
+				"duration"					"60.0"
 			}
 			"02"
 			{
@@ -19624,12 +19624,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"spell_resistance"		"50"
+				"spell_resistance"		"33"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_building_damage"		"0"
+				"bonus_building_damage"		"40"
 			}
 		}
 	}
@@ -39707,7 +39707,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"20000"
 		"AbilityCastPoint"				"0.0"
-		"AbilityCooldown"				"20.0"
+		"AbilityCooldown"				"30.0"
 		"AbilitySharedCooldown"			"force"
 
 		// Item Info
