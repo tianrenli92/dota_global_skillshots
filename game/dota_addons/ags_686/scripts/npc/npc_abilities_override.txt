@@ -35651,7 +35651,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"consumed_bonus"	"90"
+				"consumed_bonus"	"60"
 			}
 		}
 	}
