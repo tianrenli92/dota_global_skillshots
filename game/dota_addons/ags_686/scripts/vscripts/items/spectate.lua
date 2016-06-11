@@ -11,6 +11,9 @@ function SpectateAndAbandon(keys)
 				hero:RemoveItem(hero:GetItemInSlot(k))
 			end
 		end
+		if(PlayerResource:GetSelectedHeroName(i)=="npc_dota_hero_lone_druid") then
+			itemCost = itemCost - 4200
+		end
 		PlayerResource:ModifyGold(i,math.floor(itemCost)+100, false, 0)
 		hero:SetMana(0)
 		hero:ForceKill(false)

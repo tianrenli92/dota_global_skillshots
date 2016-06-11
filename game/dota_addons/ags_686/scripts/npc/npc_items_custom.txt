@@ -12,7 +12,7 @@
 			
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"							"3000"
+		"ItemCost"							"4000"
 		"ItemQuality"						"epic"
 		"ItemStackable"					"1"
 		"ItemShareability"			"ITEM_FULLY_SHAREABLE_STACKING"
@@ -32,7 +32,7 @@
 				"ScriptFile"	"items/attr_bonus.lua"
 				"Function"		"AttrBonus"
 				"Attr"				"%bonus_attr"
-				"Cost"				"3000"
+				"Cost"				"4000"
 				"Modifier_apply" "modifier_attr_bonus"
 			}
 			"ApplyModifier"
@@ -69,7 +69,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_attr"		"10"
+				"bonus_attr"		"15"
 			}
 		}	
 	}
