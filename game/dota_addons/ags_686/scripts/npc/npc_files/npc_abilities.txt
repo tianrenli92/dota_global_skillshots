@@ -787,7 +787,6 @@
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
 		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
 		"FightRecapLevel"				"1"
 
 		// Casting
@@ -918,12 +917,12 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus_movement_speed"		"10 20 30 40"
+				"bonus_movement_speed"		"16 24 32 40"
 			}			
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus_damage"				"10 20 30 40"
+				"bonus_damage"				"16 24 32 40"
 			}		
 			"04"
 			{
@@ -4095,7 +4094,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"strength_damage"		"0.3 0.4 0.5"
+				"strength_damage"		"0.3 0.45 0.6"
 			}
 		}
 	}
@@ -4647,7 +4646,7 @@
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"blast_dot_damage"		"15 30 45 60"
+				"blast_dot_damage"		"20 35 50 65"
 			}
 			
 			
@@ -5001,7 +5000,7 @@
 			"01"
 			{
 				"var_type"						"FIELD_FLOAT"
-				"damage"					"16"
+				"damage"					"14"
 			}
 			"02"
 			{
@@ -5649,7 +5648,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"40.0 30.0 20.0 10.0"
+		"AbilityCooldown"				"34 26 18 10"
 		"AbilityChannelTime"			"50"
 		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
 
@@ -5765,7 +5764,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"175 250 325"
+		"AbilityManaCost"				"150 225 300"
 
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
@@ -8046,7 +8045,7 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus_damage"					"60 80 100 120"
+				"bonus_damage"				"55 70 85 100"
 			}
 		}
 	}
@@ -8367,7 +8366,7 @@
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"near_damage"			"55 110 165"
+				"near_damage"			"50 100 150"
 			}
 			"07"
 			{
@@ -10361,7 +10360,7 @@
 		
 		"AbilityCastPoint"				"0.1"
 		"AbilityCooldown"				"40 34 28 22"
-		"AbilityManaCost"				"50"	
+		"AbilityManaCost"				"75"	
 				
 		
 		// Special
@@ -18514,7 +18513,7 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"damage"		"14 21 28 35"
+				"damage"		"14 22 30 38"
 			}
 			"02"
 			{
@@ -18722,7 +18721,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"int_steal_duration"		"60"
+				"int_steal_duration"		"80"
 			}
 		}
 	}	
@@ -18778,7 +18777,12 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage"		"75 150 225 300"
+				"damage"		"100 175 250 325"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cast_range_tooltip"	"225 350 475 600"
 			}
 		}
 	}	
@@ -19874,7 +19878,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage"					"50"
+				"damage"					"50 100 150"
 			}
 			"02"
 			{
@@ -19958,7 +19962,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage"					"500"
+				"damage"					"850"
 			}
 			"02"
 			{
@@ -20534,7 +20538,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"120"
+		"AbilityCooldown"				"130"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -20917,7 +20921,7 @@
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"32.0 26.0 20.0 14.0"
+		"AbilityCooldown"				"30 24 18 12"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -21245,7 +21249,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"75"
+		"AbilityManaCost"				"50"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -23615,7 +23619,7 @@
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"26.0"
+		"AbilityCooldown"				"20.0"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -24886,7 +24890,7 @@
 			"04"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"slow_duration"		"1.5"
+				"slow_duration"		"1.8"
 			}
 			"05"
 			{
@@ -25023,7 +25027,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"cleave_radius"			"225"
+				"cleave_radius"			"240"
 			}
 			"05"
 			{
@@ -25033,7 +25037,7 @@
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"splash_radius"			"200"
+				"splash_radius"			"240"
 			}
 			"07"
 			{
@@ -25268,7 +25272,7 @@
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"damage_radius"		"225 225 225 225"
+				"radius"		"225 225 225 225"
 			}
 			"04"
 			{	
@@ -27066,7 +27070,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"attack_speed"			"60 80 100 120"
+				"attack_speed"			"65 90 115 140"
 			}
 			"03"
 			{
@@ -28268,7 +28272,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"50"
+		"AbilityManaCost"				"100"
 
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -28510,7 +28514,7 @@
 			"07"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"dps"				"10 30 50 70"
+				"damage_per_second"				"10 30 50 70"
 			}
 			"08"
 			{
@@ -28564,12 +28568,12 @@
 			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"base_dmg"			"10 15 20 25"
+				"base_damage"			"10 15 20 25"
 			}
 			"03"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"hp_perc_dmg"		"1.25 2.5 3.75 5.0"
+				"hp_perc_damage"		"1.25 2.5 3.75 5.0"
 			}
 			"04"
 			{
@@ -28801,7 +28805,7 @@
 			"07"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"dps"				"10 30 50 70"
+				"damage_per_second"				"10 30 50 70"
 			}
 			"08"
 			{
