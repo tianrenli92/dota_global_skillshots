@@ -336,7 +336,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"2.0 2.6 3.2 4.0"
+				"duration"				"2.0 2.4 2.8 3.2"
 			}	
 		}
 	}
@@ -6422,7 +6422,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"chance"				"10 20 30 40"
+				"chance"				"20 25 30 35"
 			}
 			"02"
 			{
@@ -11788,7 +11788,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"duration"					"115.0"
+				"duration"					"90.0"
 			}
 			"02"
 			{
@@ -12123,7 +12123,7 @@
 			"04"
 			{	
 				"var_type"					"FIELD_FLOAT"
-				"duration"					"40.0"
+				"duration"					"30.0"
 			}
 			"05"
 			{	
@@ -12133,7 +12133,7 @@
 			"06"
 			{	
 				"var_type"					"FIELD_INTEGER"
-				"duration_scepter"			"40"
+				"duration_scepter"			"30"
 			}
 			"07"
 			{	
@@ -12229,7 +12229,7 @@
 			"01"
 			{	
 				"var_type"			"FIELD_FLOAT"
-				"duration"			"5.0 6.0 7.0 8.0"
+				"duration"			"6.0 9.0 12.0 15.0"
 			}
 			"02"
 			{	
@@ -14991,7 +14991,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		
-		"AbilityCooldown"				"4 2 1 0.5"
+		"AbilityCooldown"				"4 3 2 1"
 			
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -15707,7 +15707,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage_max"			"150 300 450 600"
+				"damage_max"			"100 200 300 400"
 			}
 		}
 	}
@@ -15978,7 +15978,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"min_radius"			"300 300 300 300"
+				"min_radius"			"1600"
 			}
 			"03"
 			{
@@ -16452,7 +16452,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"max_attacks"			"3 4 5 6"
+				"max_attacks"			"4 6 8 10"
 			}
 			"03"
 			{
@@ -23858,12 +23858,12 @@
 			"04"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"drain_pct"					"0.02"
+				"drain_pct"					"0.01"
 			}
 			"05"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"drain_pct_tooltip"			"2"
+				"drain_pct_tooltip"			"1"
 			}
 		}
 	}	
@@ -23899,7 +23899,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"cast_delay"				"2.5 2.25 2.0"
+				"cast_delay"				"2.5 2.0 1.5"
 			}
 			"02"
 			{
@@ -28212,7 +28212,7 @@
 			"01"
 			{
 				"var_type"							"FIELD_FLOAT"
-				"illusion_duration"					"60.0"
+				"illusion_duration"					"120.0"
 			}
 			"02"
 			{
@@ -34813,7 +34813,7 @@
 			"02"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"duration"					"3.5 4.5 5.5 6.5"
+				"duration"					"4 6 8 10"
 			}
 			"03"
 			{
