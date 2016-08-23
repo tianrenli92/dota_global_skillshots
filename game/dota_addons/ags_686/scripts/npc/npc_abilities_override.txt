@@ -11788,7 +11788,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"duration"					"60.0"
+				"duration"					"90.0"
 			}
 			"02"
 			{
@@ -15783,7 +15783,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"max_units"				"1 1 2 3"
+				"max_units"				"1 2 3 4"
 			}
 			"02"
 			{

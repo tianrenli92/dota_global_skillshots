@@ -493,7 +493,8 @@ function CagsGameMode:OnStateChange( event )
 		RadiantPlayersNow = RadiantPlayers
 		DirePlayersNow = DirePlayers
 		
-		GameRules:GetGameModeEntity():SetThink("NewPlayerHintThink", self, "NPHT", 5)	
+		GameRules:GetGameModeEntity():SetThink("NewPlayerHintThink", self, "NPHT", 5)
+		GameRules:GetGameModeEntity():SetThink("ForceRandomHintThink", self, "FRHT", 50)
 		GameRules:SetGoldTickTime(6)
 		--GameRules:SetGoldPerTick(math.floor(10*(10/(RadiantPlayers+DirePlayers))^1.5))
 		GameRules:SetGoldPerTick(0)	
@@ -526,6 +527,13 @@ function CagsGameMode:OnStateChange( event )
 	if GameRules:State_Get() == DOTA_GAMERULES_STATE_PRE_GAME then
 		--CagsGameMode:FountainChange()
 						
+		for i = 0,31 do
+			if (PlayerResource:HasSelectedHero(i)==false) and ((PlayerTeam[i+1]==2)or(PlayerTeam[i+1]==3)) then		
+					PlayerResource:GetPlayer(i):MakeRandomHeroSelection()
+					PlayerResource:SetHasRandomed(i)
+			end
+		end
+
 		if (WinStreakRecord) then
 			CagsGameMode:EloCalc()
 			for i = 0,31 do
@@ -932,6 +940,11 @@ function CagsGameMode:NewPlayerHintThink()
 			end
 		end
 	end
+	return nil
+end
+
+function CagsGameMode:ForceRandomHintThink()
+	GameRules:SendCustomMessage("#addon_force_random",0,0)
 	return nil
 end
 
