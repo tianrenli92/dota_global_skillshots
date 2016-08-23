@@ -11788,7 +11788,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"duration"					"90.0"
+				"duration"					"60.0"
 			}
 			"02"
 			{
@@ -15783,7 +15783,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"max_units"				"1 2 3 4"
+				"max_units"				"1 1 2 3"
 			}
 			"02"
 			{
@@ -27897,7 +27897,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
 		
-		"AbilityCastRange"				"750"
+		"AbilityCastRange"				"20000"
 		"AbilityCastPoint"				"0.6"
 		"FightRecapLevel"				"1"
 		
@@ -27972,7 +27972,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
 		
-		"AbilityCastRange"				"750"
+		"AbilityCastRange"				"20000"
 		"AbilityCastPoint"				"0.6"
 		"FightRecapLevel"				"1"
 		
@@ -28030,24 +28030,24 @@
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"900"
+		"AbilityCastRange"				"20000"
 
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"radius"						"900"
+				"radius"						"20000"
 			}
 			"02"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"damage_reduction_pct"			"18 26 34 42"
+				"damage_reduction_pct"			"7 14 21 28"
 			}
 			"03"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"bonus_damage_from_creep"		"5"
+				"bonus_damage_from_creep"		"3"
 			}
 			"04"
 			{
@@ -28082,7 +28082,7 @@
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"130 120 110"
+		"AbilityCooldown"				"60 45 30"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -28094,12 +28094,12 @@
 			"01"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"radius"						"450"
+				"radius"						"1600"
 			}
 			"02"
 			{
 				"var_type"						"FIELD_FLOAT"
-				"teleport_delay"				"5.0 4.0 3.0"
+				"teleport_delay"				"2.5 2 1.5"
 			}
 		}
 	}

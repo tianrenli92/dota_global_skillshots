@@ -59,6 +59,7 @@ function CagsGameMode:InitGameMode()
 	RadiantPlayersNow = 0
 	DirePlayersNow = 0
 	PlayerRandom = {false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false}
+	PlayerForceRandom = {false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false}
 	PlayerRepick = {false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false}
 	PlayerSelect = {false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false}
 	PlayerAbandon = {false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false}
@@ -150,7 +151,7 @@ function CagsGameMode:HeroSelectionThink()
 			FewPlayerBroadcast = false
 		end
 		for i = 0,31 do
-			if (PlayerResource:HasRepicked(i)==true) and (PlayerRepick[i+1] == false) then
+			if (PlayerResource:HasRepicked(i)==true and PlayerForceRandom[i+1]==false) and (PlayerRepick[i+1] == false) then
 				GameRules:SendCustomMessage("#addon_repick", i, 0)	
 				PlayerRepick[i+1] = true
 			else
@@ -531,6 +532,8 @@ function CagsGameMode:OnStateChange( event )
 			if (PlayerResource:HasSelectedHero(i)==false) and ((PlayerTeam[i+1]==2)or(PlayerTeam[i+1]==3)) then		
 					PlayerResource:GetPlayer(i):MakeRandomHeroSelection()
 					PlayerResource:SetHasRandomed(i)
+					PlayerResource:SetHasRepicked(i)
+					PlayerForceRandom[i+1]=true
 			end
 		end
 
@@ -881,7 +884,7 @@ function CagsGameMode:OnHeroPicked( event )
 	--print(PlayerResource:HasRepicked(playerID))
 	--print((playerHero:GetUnitName()):sub(15,string.len(heroString)))
 	PlayerSelect[playerID+1] = true
-	if (PlayerResource:HasRandomed(playerID) and not(PlayerResource:HasRepicked(playerID))) then
+	if (PlayerResource:HasRandomed(playerID) and (not PlayerResource:HasRepicked(playerID) or PlayerForceRandom[playerID+1])) then
 		PlayerResource:ModifyGold(playerID, 175, false, 0)
 	end
 	if PlayerTeam[playerID+1] == 2 then
