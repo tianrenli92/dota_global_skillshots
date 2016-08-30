@@ -33,7 +33,7 @@ function Activate()
 end
 
 function CagsGameMode:InitGameMode()
-	print( "ags is loaded." )
+	print( "global skillshots is loaded." )
 	
 	Storage:SetApiKey("fc80985d01e14165c9ca9d03848eaecd58d3ede3")
 	CountN = 0
@@ -59,7 +59,7 @@ function CagsGameMode:InitGameMode()
 	RadiantPlayersNow = 0
 	DirePlayersNow = 0
 	PlayerRandom = {false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false}
-	PlayerForceRandom = {false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false}
+	PlayerNotActualRepick = {false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false}
 	PlayerRepick = {false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false}
 	PlayerSelect = {false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false}
 	PlayerAbandon = {false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false}
@@ -139,7 +139,7 @@ end
 
 function CagsGameMode:HeroSelectionThink()
 	--print(GameRules:State_Get())
-	if (GameRules:State_Get() >= DOTA_GAMERULES_STATE_HERO_SELECTION) and (GameRules:State_Get() <= DOTA_GAMERULES_STATE_PRE_GAME) then
+	if (GameRules:State_Get() == DOTA_GAMERULES_STATE_HERO_SELECTION) then
 		--ShowGenericPopup("#addon_game_name", "#addon_game_name", "", "",0|1)
 		if not(TooltipReport) then
 			GameRules:SendCustomMessage("#addon_report",0,0)
@@ -151,11 +151,11 @@ function CagsGameMode:HeroSelectionThink()
 			FewPlayerBroadcast = false
 		end
 		for i = 0,31 do
-			if (PlayerResource:HasRepicked(i)==true and PlayerForceRandom[i+1]==false) and (PlayerRepick[i+1] == false) then
+			if PlayerResource:HasRepicked(i) and (PlayerRepick[i+1] == false) then
 				GameRules:SendCustomMessage("#addon_repick", i, 0)	
 				PlayerRepick[i+1] = true
 			else
-				if (PlayerResource:HasRandomed(i)==true) and (PlayerRandom[i+1] == false) then
+				if PlayerResource:HasRandomed(i) and (PlayerRandom[i+1] == false) then
 					--PlayerHeroRandomName[i+1] = PlayerResource:GetSelectedHeroName(i)
 					--PlayerHeroRandomName[i+1] = string.sub(PlayerHeroRandomName[i+1],15,string.len(PlayerHeroRandomName[i+1]))
 					PlayerRandom[i+1] = true
@@ -530,10 +530,18 @@ function CagsGameMode:OnStateChange( event )
 						
 		for i = 0,31 do
 			if (PlayerResource:HasSelectedHero(i)==false) and ((PlayerTeam[i+1]==2)or(PlayerTeam[i+1]==3)) then		
-					PlayerResource:GetPlayer(i):MakeRandomHeroSelection()
+				PlayerResource:GetPlayer(i):MakeRandomHeroSelection()
+				if not PlayerResource:HasRandomed(i) then
 					PlayerResource:SetHasRandomed(i)
-					PlayerResource:SetHasRepicked(i)
-					PlayerForceRandom[i+1]=true
+					GameRules:SendCustomMessage("#addon_random_pick", i, 0)
+				else
+					PlayerResource:ModifyGold(i, -200, false, 0)
+					GameRules:SendCustomMessage("#addon_force_random_pick", i, 0)
+				end
+			end
+			if not PlayerResource:HasRepicked(i) then
+				PlayerResource:SetHasRepicked(i)
+				PlayerNotActualRepick[i+1]=true
 			end
 		end
 
@@ -884,7 +892,7 @@ function CagsGameMode:OnHeroPicked( event )
 	--print(PlayerResource:HasRepicked(playerID))
 	--print((playerHero:GetUnitName()):sub(15,string.len(heroString)))
 	PlayerSelect[playerID+1] = true
-	if (PlayerResource:HasRandomed(playerID) and (not PlayerResource:HasRepicked(playerID) or PlayerForceRandom[playerID+1])) then
+	if (PlayerResource:HasRandomed(playerID) and (not PlayerResource:HasRepicked(playerID) or PlayerNotActualRepick[playerID+1])) then
 		PlayerResource:ModifyGold(playerID, 175, false, 0)
 	end
 	if PlayerTeam[playerID+1] == 2 then
