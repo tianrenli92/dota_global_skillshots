@@ -8910,7 +8910,7 @@
 			"02"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"aura_damage"		"-0.1 -0.2 -0.3 -0.4" 
+				"aura_damage"		"-0.2 -0.4 -0.6 -0.8" 
 			} 
 		}
 	}
