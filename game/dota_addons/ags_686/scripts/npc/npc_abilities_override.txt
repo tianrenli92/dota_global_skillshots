@@ -3796,7 +3796,7 @@
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastPoint"				"0 0 0 0"
-		"AbilityChannelTime"			"0.75 1.50 2.25 3.25"
+		"AbilityChannelTime"			"1 2 3 4"
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
@@ -3813,7 +3813,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"duration"					"0.75 1.50 2.25 3.25"
+				"duration"					"1 2 3 4"
 			}
 		}
 	}
@@ -3857,7 +3857,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"coil_duration"				"600.0"
+				"coil_duration"				"60.0"
 			}
 			"02"
 			{
@@ -5657,7 +5657,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"34 26 18 10"
+		"AbilityCooldown"				"34 30 26 22"
 		"AbilityChannelTime"			"50"
 		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
 
@@ -14324,7 +14324,7 @@
 			"02"
 			{
 				"var_type"							"FIELD_INTEGER"
-				"bonus_attack_speed_night"			"45 75 105 135"
+				"bonus_attack_speed_night"			"45 90 135 180"
 			}
 		}
 	}
@@ -14551,7 +14551,7 @@
 			"06"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"fade_delay"			"2.0 1.5 1.0 0.0"
+				"fade_delay"			"2.0 1.5 1.0 0.5"
 			}
 			"07"
 			{
@@ -14991,7 +14991,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		
-		"AbilityCooldown"				"4 3 2 1"
+		"AbilityCooldown"				"3 1.5 1 0.75"
 			
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -16696,7 +16696,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"1.5 1.0 0.5 0.1"
+		"AbilityCooldown"				"0.1"
 
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
@@ -19098,7 +19098,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"duration"					"600.0"
+				"duration"					"90.0"
 			}
 			"02"
 			{
@@ -20100,7 +20100,7 @@
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityDuration"				"2.5 2.5 2.5 2.5"
-		"AbilityCooldown"				"25.0 22.0 19.0 16.0"
+		"AbilityCooldown"				"27.0 24.0 21.0 18.0"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -25586,7 +25586,7 @@
 			"08"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"radius_scepter"				"1600"
+				"radius_scepter"				"5000"
 			}
 		}
 	}
@@ -25713,12 +25713,12 @@
 			"01"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"base_damage"						"20"
+				"base_damage"						"20 15 12"
 			}
 			"02"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"damage_per_stack"					"20 15 15"
+				"damage_per_stack"					"20 15 12"
 			}
 			"03"
 			{
@@ -27896,6 +27896,7 @@
 		"ID"							"5613"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		
 		"AbilityCastRange"				"20000"
 		"AbilityCastPoint"				"0.6"
@@ -27971,6 +27972,7 @@
 		"ID"							"5614"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		
 		"AbilityCastRange"				"20000"
 		"AbilityCastPoint"				"0.6"
@@ -34762,7 +34764,7 @@
 			"05"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"move_speed_slow_pct"				"35 40 45 50"
+				"move_speed_slow_pct"				"20 30 40 50"
 			}
 			"06"
 			{
