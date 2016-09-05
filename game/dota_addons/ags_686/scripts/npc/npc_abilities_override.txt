@@ -6217,7 +6217,7 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage_health_pct"			"0.5 1 1.5 2"
+				"damage_health_pct"			"1 2 3 4"
 			}
 		}
 	}
@@ -10496,7 +10496,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"structure_damage_mod"		"0.3"
+				"structure_damage_mod"		"0.25"
 			}
 			"02"
 			{
