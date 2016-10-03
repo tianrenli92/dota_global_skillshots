@@ -35,7 +35,7 @@ end
 function CagsGameMode:InitGameMode()
 	print( "global skillshots is loaded." )
 	
-	Storage:SetApiKey("fc80985d01e14165c9ca9d03848eaecd58d3ede3")
+	----Storage:SetApiKey("fc80985d01e14165c9ca9d03848eaecd58d3ede3")
 	CountN = 0
 	TooltipReport = false
 	FewPlayer = false
@@ -484,11 +484,11 @@ function CagsGameMode:OnStateChange( event )
 			--print(PlayerTeam[i+1])
 			if (PlayerTeam[i+1]== 2) then
 				RadiantPlayers = RadiantPlayers + 1
-				CagsGameMode:StorageGet(i)
+				----CagsGameMode:StorageGet(i)
 			end
 			if (PlayerTeam[i+1]== 3) then
 				DirePlayers = DirePlayers + 1
-				CagsGameMode:StorageGet(i)
+				----CagsGameMode:StorageGet(i)
 			end	
 		end
 		RadiantPlayersNow = RadiantPlayers
@@ -583,7 +583,7 @@ function CagsGameMode:OnStateChange( event )
 								for j = 0, 31 do
 									if PlayerTeam[j+1]==3 then
 										CagsGameMode:EloChange(j,DireEloDeltaSav)	
-										CagsGameMode:StoragePut(j)
+										----CagsGameMode:StoragePut(j)
 									end			
 								end		
 							elseif PlayerHostTeam==3 then
@@ -591,7 +591,7 @@ function CagsGameMode:OnStateChange( event )
 								for j = 0, 31 do
 									if PlayerTeam[j+1]==2 then
 										CagsGameMode:EloChange(j,RadiantEloDeltaSav)	
-										CagsGameMode:StoragePut(j)
+										----CagsGameMode:StoragePut(j)
 									end			
 								end		
 							end
@@ -599,7 +599,7 @@ function CagsGameMode:OnStateChange( event )
 						end
 						
 						if HostRecord or WinStreakRecord then
-							CagsGameMode:StoragePut(PlayerHost)
+							----CagsGameMode:StoragePut(PlayerHost)
 						end
 						
 					end
@@ -1119,7 +1119,7 @@ function CagsGameMode:OnEntityHurt( event )
   	for i = 0, 31 do
 			if (PlayerTeam[i+1]== 2)or(PlayerTeam[i+1]== 3) then
 			
-				CagsGameMode:StorageGet(i)
+				----CagsGameMode:StorageGet(i)
 				if PlayerResource:GetPlayer(i) then
 					if PlayerResource:GetPlayer(i):GetAssignedHero() then
 						if PlayerResource:GetPlayer(i):GetAssignedHero():FindModifierByName("modifier_item_moon_shard_consumed") then
@@ -1304,7 +1304,7 @@ function CagsGameMode:OnEntityKilled( event )
 		
 		for i = 0, 31 do
 			if (PlayerTeam[i+1]==2) or (PlayerTeam[i+1]==3) then
-				CagsGameMode:StoragePut(i)
+				----CagsGameMode:StoragePut(i)
 				--DeepPrintTable(PlayerStorage[i+1])
 				if WinStreakRecord then
 					CagsGameMode:WinStreakBC(i)
