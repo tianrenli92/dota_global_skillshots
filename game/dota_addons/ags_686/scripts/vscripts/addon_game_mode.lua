@@ -84,6 +84,7 @@ function CagsGameMode:InitGameMode()
 	Convars:RegisterCommand("test_broadcast", function(wtfnoobnil, num) if PlayerResource:GetSteamAccountID(Convars:GetCommandClient():GetPlayerID()) == 161697269 and num then CagsGameMode:WinStreakBC(tonumber(num)) end end, "Test the broadcast of a player.", 0)
 	Convars:RegisterCommand("test_quickinit", function(wtfnoobnil) if PlayerResource:GetSteamAccountID(Convars:GetCommandClient():GetPlayerID()) == 161697269 then CagsGameMode:TestInit() end end, "Combo cheat commands.", 0)
 	Convars:RegisterCommand("test_fastend", function(wtfnoobnil, num) if PlayerResource:GetSteamAccountID(Convars:GetCommandClient():GetPlayerID()) == 161697269 and num then CagsGameMode:FastEnd(tonumber(num)) end end, "Fast end test. 2/3 for rad/dire.", 0)
+	Convars:RegisterCommand("test_destroyfillers", function(wtfnoobnil) if PlayerResource:GetSteamAccountID(Convars:GetCommandClient():GetPlayerID()) == 161697269 then CagsGameMode:DestroyFillers() end end, "Destroy all shrines.", 0)
 	Convars:RegisterCommand("test_changeelo", function(wtfnoobnil, num) if PlayerResource:GetSteamAccountID(Convars:GetCommandClient():GetPlayerID()) == 161697269 and num then CagsGameMode:EloChange(0,tonumber(num)) end end, "Adjust elo.", 0)
 	Convars:RegisterCommand("test_printmodifiers", function(wtfnoobnil, num) if PlayerResource:GetSteamAccountID(Convars:GetCommandClient():GetPlayerID()) == 161697269 and num then CagsGameMode:PrintModifiers(tonumber(num)) end end, "Print modifiers.", 0)
 	Convars:RegisterCommand("test_abandonsimulation", function(wtfnoobnil) if PlayerResource:GetSteamAccountID(Convars:GetCommandClient():GetPlayerID()) == 161697269 then CagsGameMode:AbandonSimulation() end end, "Abandon Simulation.", 0)
@@ -326,6 +327,7 @@ function CagsGameMode:DestroyRadiantBarracks()
 	end
 end
 
+
 function CagsGameMode:DestroyDireBarracks()
 	RaxDestroy=Entities:FindAllByName("bad_rax_melee_top")
 	for k,ent in pairs(RaxDestroy) do
@@ -349,6 +351,25 @@ function CagsGameMode:DestroyDireBarracks()
 	end
 	RaxDestroy=Entities:FindAllByName("bad_rax_range_bot")
 	for k,ent in pairs(RaxDestroy) do
+		ent:ForceKill(false)
+	end
+end
+
+function CagsGameMode:DestroyFillers()
+	FillerDestroy=Entities:FindAllByName("good_healer_6")
+	for k,ent in pairs(FillerDestroy) do
+		ent:ForceKill(false)
+	end
+	FillerDestroy=Entities:FindAllByName("good_healer_7")
+	for k,ent in pairs(FillerDestroy) do
+		ent:ForceKill(false)
+	end
+	FillerDestroy=Entities:FindAllByName("bad_healer_6")
+	for k,ent in pairs(FillerDestroy) do
+		ent:ForceKill(false)
+	end
+	FillerDestroy=Entities:FindAllByName("bad_healer_7")
+	for k,ent in pairs(FillerDestroy) do
 		ent:ForceKill(false)
 	end
 end
@@ -478,6 +499,7 @@ function CagsGameMode:OnStateChange( event )
 	if GameRules:State_Get() == DOTA_GAMERULES_STATE_HERO_SELECTION then
 		CustomUI:DynamicHud_Create(-1,nil,"file://{resources}/layout/custom_game/barebones_notifications.xml",nil)
 		--CustomUI:DynamicHud_Create(-1,"MyUIButton","file://{resources}/layout/custom_game/rank_info.xml",nil)
+		CagsGameMode:DestroyFillers()
 		for i = 0, 31 do
 			PlayerTeam[i+1] = PlayerResource:GetTeam(i)
 			--PlayerResource:SetCustomBuybackCooldown(i,210)
@@ -542,7 +564,6 @@ function CagsGameMode:OnStateChange( event )
 	if GameRules:State_Get() == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
 		
 		CagsGameMode:FountainChange()
-		
 		if IsDedicatedServer() == false then
 			for i = 0, 31 do
 				if PlayerResource:IsValidPlayerID(i) then
