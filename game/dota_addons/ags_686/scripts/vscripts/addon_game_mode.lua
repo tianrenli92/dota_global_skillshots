@@ -151,7 +151,7 @@ function CagsGameMode:HeroSelectionThink()
 			FewPlayerBroadcast = false
 		end
 		for i = 0,31 do
-			if PlayerResource:HasRepicked(i) and (PlayerRepick[i+1] == false) then
+			if not PlayerResource:CanRepick(i) and (PlayerRepick[i+1] == false) and ((PlayerTeam[i+1]==2)or(PlayerTeam[i+1]==3)) then
 				GameRules:SendCustomMessage("#addon_repick", i, 0)	
 				PlayerRepick[i+1] = true
 			else
@@ -212,7 +212,7 @@ function CagsGameMode:AbandonCheckThink()
 							if PlayerTeam[j+1]==2 then
 								ItemCost = 0 --get player j total item cost
 								if PlayerResource:GetSelectedHeroEntity(j) then
-									for k = 0, 11 do
+									for k = 0, 14 do
 										if PlayerResource:GetSelectedHeroEntity(j):GetItemInSlot(k) then
 											ItemCost = ItemCost + PlayerResource:GetSelectedHeroEntity(j):GetItemInSlot(k):GetCost()
 										end
@@ -224,7 +224,7 @@ function CagsGameMode:AbandonCheckThink()
 								PlayerResource:ModifyGold(j,math.floor((PlayerResource:GetGold(j)+ItemCost)*(GCMulti-1)), false, 0)
 							end
 						end				
-						for k = 0, 11 do
+						for k = 0, 14 do
 							if PlayerResource:GetSelectedHeroEntity(i):GetItemInSlot(k) then
 								PlayerResource:GetSelectedHeroEntity(i):RemoveItem(PlayerResource:GetSelectedHeroEntity(i):GetItemInSlot(k))
 							end
@@ -254,7 +254,7 @@ function CagsGameMode:AbandonCheckThink()
 							if PlayerTeam[j+1]==3 then
 								ItemCost = 0 --get player j total item cost
 								if PlayerResource:GetSelectedHeroEntity(j) then
-									for k = 0, 11 do
+									for k = 0, 14 do
 										if PlayerResource:GetSelectedHeroEntity(j):GetItemInSlot(k) then
 											ItemCost = ItemCost + PlayerResource:GetSelectedHeroEntity(j):GetItemInSlot(k):GetCost()
 										end
@@ -266,7 +266,7 @@ function CagsGameMode:AbandonCheckThink()
 								PlayerResource:ModifyGold(j,math.floor((PlayerResource:GetGold(j)+ItemCost)*(GCMulti-1)), false, 0)
 							end
 						end				
-						for k = 0, 11 do
+						for k = 0, 14 do
 							if PlayerResource:GetSelectedHeroEntity(i):GetItemInSlot(k) then
 								PlayerResource:GetSelectedHeroEntity(i):RemoveItem(PlayerResource:GetSelectedHeroEntity(i):GetItemInSlot(k))
 							end
@@ -495,7 +495,8 @@ function CagsGameMode:OnStateChange( event )
 		DirePlayersNow = DirePlayers
 		
 		GameRules:GetGameModeEntity():SetThink("NewPlayerHintThink", self, "NPHT", 5)
-		GameRules:GetGameModeEntity():SetThink("ForceRandomHintThink", self, "FRHT", 50)
+		--GameRules:GetGameModeEntity():SetThink("ForceRandomHintThink", self, "FRHT", 50)
+		--GameRules:GetGameModeEntity():SetThink("ForceRandomThink", self, "FRT", 59.9)
 		GameRules:SetGoldTickTime(6)
 		--GameRules:SetGoldPerTick(math.floor(10*(10/(RadiantPlayers+DirePlayers))^1.5))
 		GameRules:SetGoldPerTick(0)	
@@ -527,23 +528,6 @@ function CagsGameMode:OnStateChange( event )
 	end
 	if GameRules:State_Get() == DOTA_GAMERULES_STATE_PRE_GAME then
 		--CagsGameMode:FountainChange()
-						
-		for i = 0,31 do
-			if (PlayerResource:HasSelectedHero(i)==false) and ((PlayerTeam[i+1]==2)or(PlayerTeam[i+1]==3)) then		
-				PlayerResource:GetPlayer(i):MakeRandomHeroSelection()
-				if not PlayerResource:HasRandomed(i) then
-					PlayerResource:SetHasRandomed(i)
-					GameRules:SendCustomMessage("#addon_random_pick", i, 0)
-				else
-					PlayerResource:ModifyGold(i, -200, false, 0)
-					GameRules:SendCustomMessage("#addon_force_random_pick", i, 0)
-				end
-			end
-			if not PlayerResource:HasRepicked(i) then
-				PlayerResource:SetHasRepicked(i)
-				PlayerNotActualRepick[i+1]=true
-			end
-		end
 
 		if (WinStreakRecord) then
 			CagsGameMode:EloCalc()
@@ -889,10 +873,10 @@ function CagsGameMode:OnHeroPicked( event )
 	--print(PlayerResource:GetTeam(playerID))
 	--print(playerHero:GetUnitName())
 	--print(PlayerResource:HasRandomed(playerID))
-	--print(PlayerResource:HasRepicked(playerID))
+	--print(PlayerResource:CanRepick(playerID))
 	--print((playerHero:GetUnitName()):sub(15,string.len(heroString)))
 	PlayerSelect[playerID+1] = true
-	if (PlayerResource:HasRandomed(playerID) and (not PlayerResource:HasRepicked(playerID) or PlayerNotActualRepick[playerID+1])) then
+	if (PlayerResource:HasRandomed(playerID) and (PlayerResource:CanRepick(playerID) or PlayerNotActualRepick[playerID+1])) then
 		PlayerResource:ModifyGold(playerID, 175, false, 0)
 	end
 	if PlayerTeam[playerID+1] == 2 then
@@ -956,6 +940,27 @@ end
 
 function CagsGameMode:ForceRandomHintThink()
 	GameRules:SendCustomMessage("#addon_force_random",0,0)
+	return nil
+end
+
+function CagsGameMode:ForceRandomThink()
+	for i = 0,31 do
+		if (PlayerResource:HasSelectedHero(i)==false) and ((PlayerTeam[i+1]==2)or(PlayerTeam[i+1]==3)) then
+			print(i,"wtf")
+			PlayerResource:GetPlayer(i):MakeRandomHeroSelection()
+			if not PlayerResource:HasRandomed(i) then
+				PlayerResource:SetHasRandomed(i)
+				GameRules:SendCustomMessage("#addon_random_pick", i, 0)
+			else
+				PlayerResource:ModifyGold(i, -200, false, 0)
+				GameRules:SendCustomMessage("#addon_force_random_pick", i, 0)
+			end
+		end
+		if PlayerResource:CanRepick(i) then
+			--PlayerResource:SetHasRepicked(i)
+			PlayerNotActualRepick[i+1]=true
+		end
+	end
 	return nil
 end
 
