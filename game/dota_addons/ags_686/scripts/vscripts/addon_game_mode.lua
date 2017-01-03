@@ -49,6 +49,7 @@ function CagsGameMode:InitGameMode()
 	MiranaAbandon = false
 	DruidExist = false
 	TechiesSuicide = false
+	MonkeyKingExist=false
 	FinalNotice = false
 	HostQualityPunish = false
 	MegaAutoSpawn = false
@@ -901,11 +902,14 @@ function CagsGameMode:OnHeroPicked( event )
 	if (PlayerResource:HasRandomed(playerID) and (PlayerResource:CanRepick(playerID) or PlayerNotActualRepick[playerID+1])) then
 		PlayerResource:ModifyGold(playerID, 175, false, 0)
 	end
-	if PlayerTeam[playerID+1] == 2 then
-		PlayerResource:ModifyGold(playerID, PlayerResource:GetGold(playerID)*(RadiantGC-1)+625*RadiantGC*(5-RadiantPlayers)/RadiantPlayers, false, 0)
-	end
-	if PlayerTeam[playerID+1] == 3 then
-		PlayerResource:ModifyGold(playerID, PlayerResource:GetGold(playerID)*(DireGC-1)+625*DireGC*(5-DirePlayers)/DirePlayers, false, 0)
+	if not(heroString =="npc_dota_hero_monkey_king" and MonkeyKingExist) then
+		if PlayerTeam[playerID+1] == 2 then
+			PlayerResource:ModifyGold(playerID, PlayerResource:GetGold(playerID)*(RadiantGC-1)+625*RadiantGC*(5-RadiantPlayers)/RadiantPlayers, false, 0)
+			print("2")
+		end
+		if PlayerTeam[playerID+1] == 3 then
+			PlayerResource:ModifyGold(playerID, PlayerResource:GetGold(playerID)*(DireGC-1)+625*DireGC*(5-DirePlayers)/DirePlayers, false, 0)
+		end
 	end
 	--[[
 	if heroString =="npc_dota_hero_ursa" then
@@ -935,6 +939,9 @@ function CagsGameMode:OnHeroPicked( event )
 		MiranaHero = playerHero
 		MiranaArrowSum = 0
 		MiranaArrowSuccess = 0
+	end
+	if heroString =="npc_dota_hero_monkey_king" then
+		MonkeyKingExist=true
 	end
 end
 
