@@ -102,7 +102,6 @@
 		"item"		"item_hand_of_midas"
 		"item"		"item_travel_boots"		
 		"item"		"item_moon_shard"					
- 		"item"		"item_spectate_game"		
 	}
 
 	// Level 2 - Blue Recipes
@@ -258,6 +257,7 @@
 		"item"		"item_reaver"
 		"item"		"item_eagle"
 		"item"		"item_relic"
+ 		"item"		"item_spectate_game"		
 	}
 
 	"pregame"

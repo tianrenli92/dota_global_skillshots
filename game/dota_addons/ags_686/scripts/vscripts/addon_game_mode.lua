@@ -77,6 +77,7 @@ function CagsGameMode:InitGameMode()
 	DireScore = 0
 	BaseElo = 3000
 	EloVar = 50
+	RespawnReductionTalents={["special_bonus_respawn_reduction_15"]=15,["special_bonus_respawn_reduction_20"]=20,["special_bonus_respawn_reduction_25"]=25,["special_bonus_respawn_reduction_30"]=30,["special_bonus_respawn_reduction_35"]=35,["special_bonus_respawn_reduction_40"]=40,["special_bonus_respawn_reduction_50"]=50,["special_bonus_respawn_reduction_60"]=60}
 	--PlayerHeroRandomName = {}
 	--SendToServerConsole("sv_cheats 1")
 	
@@ -971,6 +972,7 @@ function CagsGameMode:ForceRandomThink()
 			PlayerResource:GetPlayer(i):MakeRandomHeroSelection()
 			if not PlayerResource:HasRandomed(i) then
 				PlayerResource:SetHasRandomed(i)
+				PlayerRandom[i+1] = true
 				GameRules:SendCustomMessage("#addon_random_pick", i, 0)
 			else
 				PlayerResource:ModifyGold(i, -200, false, 0)
@@ -1112,9 +1114,11 @@ function CagsGameMode:OnPlayerUseAbility( event )
 		--Say(MiranaHero,"Mirana's No."..MiranaArrowSum.." Arrow is coming!", false)
   	Notifications:BottomToAll({text="#addon_mirana_arrow", duration=5.0, style={color="blue", ["font-size"]="30px"}})				
 	end
+--[[
 	if (abilityName=="techies_suicide") and (playerName=="npc_dota_hero_techies") then
 		TechiesSuicide = true
 	end
+]]
 end
 
 function CagsGameMode:OnEntityHurt( event )
@@ -1206,12 +1210,14 @@ function CagsGameMode:OnEntityKilled( event )
 			if inflictName=="necrolyte_reapers_scythe" then
 				respawnTime = respawnTime + 5 * inflictLevel
 			end
-
+--[[
 			if (TechiesSuicide == true) and (killedUnitName == "npc_dota_hero_techies") then
 					respawnTime = respawnTime / 2
 					TechiesSuicide = false
 			end
-
+]]
+			--print(CagsGameMode:TalentRespawnReduction(attackUnit))
+			respawnTime=respawnTime-CagsGameMode:TalentRespawnReduction(attackUnit)/2
 			if (killedUnitTeam==DOTA_TEAM_GOODGUYS) and (RadiantPlayersNow~=0) then
 				respawnTime = respawnTime*(RadiantPlayersNow/5)^0.5			
 			end
@@ -1364,6 +1370,18 @@ function CagsGameMode:OnEntityKilled( event )
 	end
 	
 	
+end
+
+function CagsGameMode:TalentRespawnReduction(unit)
+	s=0
+	for k,v in pairs(RespawnReductionTalents) do
+		if unit:HasAbility(k) then
+			if unit:FindAbilityByName(k):GetLevel()==1 then
+				s=s+v
+			end
+		end
+	end
+	return s
 end
 
 function CagsGameMode:HostQualityIncrease()
