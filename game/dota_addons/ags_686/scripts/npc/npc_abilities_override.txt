@@ -32260,12 +32260,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lifesteal"				"10"
+				"lifesteal"				"6"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"hp_regen"				"10"
+				"hp_regen"				"6"
 			}
 			"03"
 			{
@@ -53761,7 +53761,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"hp_regen_aura"			"8"
+				"hp_regen_aura"			"3"
 			}
 			"05"
 			{
