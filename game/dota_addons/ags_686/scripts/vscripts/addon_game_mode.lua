@@ -142,7 +142,7 @@ end
 
 function CagsGameMode:HeroSelectionThink()
 	--print(GameRules:State_Get())
-	if (GameRules:State_Get() == DOTA_GAMERULES_STATE_HERO_SELECTION) then
+	if (GameRules:State_Get() == DOTA_GAMERULES_STATE_HERO_SELECTION or GameRules:State_Get() == DOTA_GAMERULES_STATE_STRATEGY_TIME) then
 		--ShowGenericPopup("#addon_game_name", "#addon_game_name", "", "",0|1)
 		if not(TooltipReport) then
 			GameRules:SendCustomMessage("#addon_report",0,0)

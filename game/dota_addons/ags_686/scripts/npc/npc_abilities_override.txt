@@ -7297,7 +7297,7 @@
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"90"
-		"AbilityDuration"				"10.0"
+		"AbilityDuration"				"30.0"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -10661,7 +10661,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"chance_pct"			"10 15 20 25"
+				"chance_pct"			"15 20 25 30"
 			}
 			"04"
 			{
@@ -10699,7 +10699,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"6 8 10 12"
+				"duration"				"9 12 15 18"
 			}					
 			"03"
 			{
@@ -18300,7 +18300,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"20000"
 		"AbilityCastPoint"				"0.05"
-		"AbilityCooldown"				"20"
+		"AbilityCooldown"				"13"
 		"AbilityManaCost"				"100"
 
 		// Stats
@@ -18358,7 +18358,7 @@
 
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"45"
+		"AbilityCooldown"				"30"
 		"AbilityManaCost"				"200"
 		"AbilityCastPoint"				"0.05"
 		
@@ -18415,7 +18415,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"20000"
 		"AbilityCastPoint"				"0.05"
-		"AbilityCooldown"				"30"
+		"AbilityCooldown"				"20"
 		"AbilityManaCost"				"150"
 			
 		// Special
@@ -18492,7 +18492,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"20000"
 		"AbilityCastPoint"				"0.05"
-		"AbilityCooldown"				"30"
+		"AbilityCooldown"				"20"
 		"AbilityManaCost"				"125"
 			
 		// Special
@@ -18547,7 +18547,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"20000"
 		"AbilityCastPoint"				"0.05"
-		"AbilityCooldown"				"15"
+		"AbilityCooldown"				"10"
 		"AbilityManaCost"				"45"
 			
 		// Special
@@ -18594,7 +18594,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"20000"
 		"AbilityCastPoint"				"0.05"
-		"AbilityCooldown"				"55"
+		"AbilityCooldown"				"37"
 		"AbilityManaCost"				"200"
 
 		// Stats
@@ -18682,7 +18682,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"0"
 		"AbilityCastPoint"				"0.05"
-		"AbilityCooldown"				"25"
+		"AbilityCooldown"				"17"
 		"AbilityManaCost"				"175"
 			
 		// Special
@@ -18733,7 +18733,7 @@
 
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"30"
+		"AbilityCooldown"				"20"
 		"AbilityManaCost"				"75"
 		"AbilityCastPoint"				"0.05"
 		
@@ -18837,7 +18837,7 @@
 
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"25"
+		"AbilityCooldown"				"17"
 		"AbilityManaCost"				"175"
 		"AbilityCastPoint"				"0.05"
 		
@@ -18912,7 +18912,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"20000"
 		"AbilityCastPoint"				"0.05"
-		"AbilityCooldown"				"40"
+		"AbilityCooldown"				"27"
 		"AbilityManaCost"				"300"
 		"AbilityModifierSupportValue"	"0.5"	// Applies 2 modifiers
 
@@ -21168,7 +21168,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"2.0"
+				"duration"				"3.0"
 			}
 			"02"
 			{
@@ -35310,7 +35310,7 @@
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"1600"
+		"AbilityCastRange"				"20000"
 		"AbilityCastPoint"				"1.0"
 
 		// Time		
@@ -35328,12 +35328,12 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"radius"				"400"
+				"radius"				"1600"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage"					"600 800 1000 1200"
+				"damage"					"300 400 500 600"
 				"LinkedSpecialBonus"		"special_bonus_unique_techies"
 			}
 			"03"
@@ -35344,7 +35344,7 @@
 			"04"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"hp_cost"			"100"
+				"hp_cost"			"50"
 			} 
 			"05"
 			{
@@ -55547,7 +55547,7 @@
 
 		"AbilityCastRange"				"20000"
 		"AbilityCastPoint"				"0.0"
-		"AbilityCooldown"				"20.0"
+		"AbilityCooldown"				"13.0"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
