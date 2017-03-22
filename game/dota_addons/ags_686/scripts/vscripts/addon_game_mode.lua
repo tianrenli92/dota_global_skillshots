@@ -53,6 +53,7 @@ function CagsGameMode:InitGameMode()
 	FinalNotice = false
 	HostQualityPunish = false
 	MegaAutoSpawn = false
+	bMultiplyGold = false
 	
 	PlayerSum = PlayerResource:GetPlayerCount()
 	RadiantPlayers = 0
@@ -78,7 +79,7 @@ function CagsGameMode:InitGameMode()
 	DireScore = 0
 	BaseElo = 3000
 	EloVar = 50
-	RespawnReductionTalents={["special_bonus_respawn_reduction_15"]=15,["special_bonus_respawn_reduction_20"]=20,["special_bonus_respawn_reduction_25"]=25,["special_bonus_respawn_reduction_30"]=30,["special_bonus_respawn_reduction_35"]=35,["special_bonus_respawn_reduction_40"]=40,["special_bonus_respawn_reduction_50"]=50,["special_bonus_respawn_reduction_60"]=60}
+	RespawnReductionTalents={["special_bonus_respawn_reduction_15"]=15,["special_bonus_respawn_reduction_20"]=20,["special_bonus_respawn_reduction_25"]=25,["special_bonus_respawn_reduction_30"]=30,["special_bonus_respawn_reduction_35"]=35,["special_bonus_respawn_reduction_40"]=40,["special_bonus_respawn_reduction_45"]=45,["special_bonus_respawn_reduction_50"]=50,["special_bonus_respawn_reduction_60"]=60}
 	--PlayerHeroRandomName = {}
 	--SendToServerConsole("sv_cheats 1")
 	
@@ -519,8 +520,8 @@ function CagsGameMode:OnStateChange( event )
 		DirePlayersNow = DirePlayers
 		
 		GameRules:GetGameModeEntity():SetThink("NewPlayerHintThink", self, "NPHT", 5)
-		--GameRules:GetGameModeEntity():SetThink("ForceRandomHintThink", self, "FRHT", 50)
-		--GameRules:GetGameModeEntity():SetThink("ForceRandomThink", self, "FRT", 59.9)
+		GameRules:GetGameModeEntity():SetThink("ForceRandomHintThink", self, "FRHT", 50)
+		GameRules:GetGameModeEntity():SetThink("ForceRandomThink", self, "FRT", 59.9)
 		GameRules:SetGoldTickTime(6)
 		--GameRules:SetGoldPerTick(math.floor(10*(10/(RadiantPlayers+DirePlayers))^1.5))
 		GameRules:SetGoldPerTick(0)	
@@ -902,13 +903,15 @@ function CagsGameMode:OnHeroPicked( event )
 	if (PlayerResource:HasRandomed(playerID) and (PlayerResource:CanRepick(playerID) or PlayerNotActualRepick[playerID+1])) then
 		PlayerResource:ModifyGold(playerID, 175, false, 0)
 	end
-	if not(heroString =="npc_dota_hero_monkey_king" and MonkeyKingExist) then
-		if PlayerTeam[playerID+1] == 2 then
-			PlayerResource:ModifyGold(playerID, PlayerResource:GetGold(playerID)*(RadiantGC-1)+625*RadiantGC*(5-RadiantPlayers)/RadiantPlayers, false, 0)
-			print("2")
-		end
-		if PlayerTeam[playerID+1] == 3 then
-			PlayerResource:ModifyGold(playerID, PlayerResource:GetGold(playerID)*(DireGC-1)+625*DireGC*(5-DirePlayers)/DirePlayers, false, 0)
+	if bMultiplyGold then
+		if not(heroString =="npc_dota_hero_monkey_king" and MonkeyKingExist) then
+			if PlayerTeam[playerID+1] == 2 then
+				PlayerResource:ModifyGold(playerID, PlayerResource:GetGold(playerID)*(RadiantGC-1)+625*RadiantGC*(5-RadiantPlayers)/RadiantPlayers, false, 0)
+				print("2")
+			end
+			if PlayerTeam[playerID+1] == 3 then
+				PlayerResource:ModifyGold(playerID, PlayerResource:GetGold(playerID)*(DireGC-1)+625*DireGC*(5-DirePlayers)/DirePlayers, false, 0)
+			end
 		end
 	end
 	--[[
@@ -975,14 +978,15 @@ end
 function CagsGameMode:ForceRandomThink()
 	for i = 0,31 do
 		if (PlayerResource:HasSelectedHero(i)==false) and ((PlayerTeam[i+1]==2)or(PlayerTeam[i+1]==3)) then
-			print(i,"wtf")
-			PlayerResource:GetPlayer(i):MakeRandomHeroSelection()
+			--print(PlayerResource:HasRandomed(i))
 			if not PlayerResource:HasRandomed(i) then
+				PlayerResource:GetPlayer(i):MakeRandomHeroSelection()
+				PlayerResource:SetHasRandomed(i)
+				PlayerResource:ModifyGold(i, 200, false, 0)
+			else
+				PlayerResource:GetPlayer(i):MakeRandomHeroSelection()
 				PlayerResource:SetHasRandomed(i)
 				PlayerRandom[i+1] = true
-				GameRules:SendCustomMessage("#addon_random_pick", i, 0)
-			else
-				PlayerResource:ModifyGold(i, -200, false, 0)
 				GameRules:SendCustomMessage("#addon_force_random_pick", i, 0)
 			end
 		end
@@ -1223,8 +1227,8 @@ function CagsGameMode:OnEntityKilled( event )
 					TechiesSuicide = false
 			end
 ]]
-			--print(CagsGameMode:TalentRespawnReduction(attackUnit))
-			respawnTime=respawnTime-CagsGameMode:TalentRespawnReduction(attackUnit)/2
+			--print(CagsGameMode:TalentRespawnReduction(killedUnit))
+			respawnTime=respawnTime-CagsGameMode:TalentRespawnReduction(killedUnit)/2
 			if (killedUnitTeam==DOTA_TEAM_GOODGUYS) and (RadiantPlayersNow~=0) then
 				respawnTime = respawnTime*(RadiantPlayersNow/5)^0.5			
 			end
