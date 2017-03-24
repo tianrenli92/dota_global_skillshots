@@ -387,7 +387,7 @@
 		"ItemCost"						"200"
 		"ItemShopTags"					"damage"
 		"ItemQuality"					"component"
-		"ItemAliases"					"quelling blade"
+		"ItemAliases"					"qb;quelling blade"
 		"SideShop"						"1"
 		
 		// Special	
@@ -1092,7 +1092,7 @@
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"2100"
+		"ItemCost"						"2150"
 		"ItemShopTags"					"agi;int;str"
 		"ItemQuality"					"secret_shop"
 		"ItemAliases"					"ultimate orb"
@@ -1285,6 +1285,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"30"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityCastRange"				"900"
 		"Model"							"models/props_gameplay/gem01.vmdl"
 		"Effect"						"particles/generic_gameplay/dropped_gem.vpcf"
 
@@ -1451,6 +1452,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"13.0"
 		"AbilitySharedCooldown"			"magicwand"
+		"AbilityCastRange"				"1200"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -1524,6 +1526,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"13.0"
 		"AbilitySharedCooldown"			"magicwand"
+		"AbilityCastRange"				"1200"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -1761,6 +1764,7 @@
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"30.0"
+		"AbilityCastRange"				"1050"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -1949,14 +1953,14 @@
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"200"
+		"ItemCost"						"100"
 		"ItemShopTags"					"consumable"
 		"ItemQuality"					"consumable"
 		"ItemAliases"					"sentry ward"
 		"ItemStackable"					"1"
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
 		"ItemPermanent"					"0"
-		"ItemInitialCharges"			"2"
+		"ItemInitialCharges"			"1"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES"
 		"ItemSupport"					"1"
 		"IsTempestDoubleClonable"		"0"
@@ -2039,7 +2043,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"265"
+		"ItemCost"						"165"
 		"ItemQuality"					"common"
 		"ItemAliases"					"ward"
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
@@ -2261,7 +2265,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"46"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_NOASSIST | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_DONT_CANCEL_CHANNEL"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_NOASSIST | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_DONT_CANCEL_CHANNEL"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_BUILDING"
 		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
@@ -2270,7 +2274,7 @@
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"0"
-		"AbilityCooldown"				"70.0"
+		"AbilityCooldown"				"80.0"
 		"AbilitySharedCooldown"			"teleport"
 		"AbilityChannelTime"			"3.0"
 		"AbilityCastPoint"				"0.0"
@@ -2281,7 +2285,7 @@
 		"ItemCost"						"50"
 		"ItemShopTags"					"consumable;tutorial"
 		"ItemQuality"					"consumable"
-		"ItemAliases"					"tp;town portal scroll"
+		"ItemAliases"					"tp;town portal scroll;teleport"
 		"ItemStackable"					"1"
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
 		"ItemPermanent"					"0"
@@ -2370,7 +2374,7 @@
 		"ID"							"48"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP | DOTA_UNIT_TARGET_BUILDING"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
 		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
 
 		// Stats		
@@ -2403,6 +2407,16 @@
 				"var_type"				"FIELD_INTEGER"
 				"bonus_movement_speed"	"100"
 			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"maximum_distance"		"575"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"vision_radius"			"200"
+			}
 		}
 	}
 	
@@ -2416,7 +2430,7 @@
 		"ID"							"220"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP | DOTA_UNIT_TARGET_BUILDING"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
 		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
 
 		// Stats		
@@ -2444,6 +2458,16 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"bonus_movement_speed"	"100"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"maximum_distance"		"575"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"vision_radius"			"200"
 			}
 		}
 	}
@@ -3506,11 +3530,12 @@
 		// Stats		
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"65.0"
+		"AbilityCastRange"				"900"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityManaCost"				"225"
-		"ItemCost"						"2275"
+		"ItemCost"						"2375"
 		"ItemShopTags"					"agi;int;str;armor;boost_health"
 		"ItemQuality"					"rare"
 		"ItemAliases"					"mechanism;mekansm"
@@ -3598,10 +3623,11 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"81"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityCastRange"				"900"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"2275"
+		"ItemCost"						"2375"
 		"ItemShopTags"					"lifesteal;damage;armor;regen_mana"
 		"ItemQuality"					"rare"
 		"ItemAliases"					"vladmir's offering;vlads"
@@ -3717,6 +3743,7 @@
 		// Stats		
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"25.0"
+		"AbilityCastRange"				"900"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -3802,6 +3829,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"88"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE"
+		"AbilityCastRange"				"900"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -3890,10 +3918,11 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"60.0"
 		"AbilityManaCost"				"100"
+		"AbilityCastRange"				"900"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"3100"
+		"ItemCost"						"3200"
 		"ItemShopTags"					"regen_health;boost_magic_resist"
 		"ItemQuality"					"rare"
 		"ItemAliases"					"pipe of insight"
@@ -4103,7 +4132,7 @@
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"200"	
+		"ItemCost"						"300"	
 		"ItemShopTags"					""
 		
 		// Recipe
@@ -4128,10 +4157,11 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"575"
+		"ItemCost"						"675"
 		"ItemShopTags"					"str;int;agi;regen_health"
 		"ItemQuality"					"rare"
 		"ItemAliases"					"headdress"
+		"AbilityCastRange"				"900"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -4206,7 +4236,7 @@
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityManaCost"				"100"
-		"ItemCost"						"5650"
+		"ItemCost"						"5700"
 		"ItemShopTags"					"int;regen_mana;agi;hard_to_tag"
 		"ItemQuality"					"rare"
 		"ItemAliases"					"hex;sheepstick;scythe of vyse"
@@ -4383,7 +4413,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"900"
 		"AbilityCastPoint"				"0.0"
-		"AbilityCooldown"				"11.0"
+		"AbilityCooldown"				"14.0"
 		"AbilitySharedCooldown"			"orchid"
 
 		// Item Info
@@ -4539,7 +4569,7 @@
 			"08"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"attack_speed_slow"			"100"
+				"attack_speed_slow"			"0"
 			}
 			"09"
 			{
@@ -4826,7 +4856,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"800"
 		"AbilityCastPoint"				"0.0"
-		"AbilityCooldown"				"14.0"
+		"AbilityCooldown"				"15.0"
 		"AbilitySharedCooldown"			"force"
 
 		// Item Info
@@ -5437,7 +5467,7 @@
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastPoint"				"0.0"
-		"AbilityCooldown"				"95.0"
+		"AbilityCooldown"				"90.0"
 		"AbilitySharedCooldown"			"necronomicon"
 		"FightRecapLevel"				"1"
 
@@ -5547,7 +5577,7 @@
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastPoint"				"0.0"
-		"AbilityCooldown"				"95.0"
+		"AbilityCooldown"				"90.0"
 		"AbilitySharedCooldown"			"necronomicon"
 		"FightRecapLevel"				"1"
 
@@ -5657,7 +5687,7 @@
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastPoint"				"0.0"
-		"AbilityCooldown"				"95.0"
+		"AbilityCooldown"				"90.0"
 		"AbilitySharedCooldown"			"necronomicon"
 		"FightRecapLevel"				"1"
 
@@ -5799,7 +5829,7 @@
 		"ItemCost"						"4200"
 		"ItemShopTags"					"int;str;agi;mana_pool;health_pool;hard_to_tag"
 		"ItemQuality"					"rare"
-		"ItemAliases"					"ultimate;aghanim's scepter;ags"
+		"ItemAliases"					"ags;ultimate;aghanim's scepter;ags"
 		//"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_NEVER"		// heroes for whom this is a problem solve it in their code - ogre magi, meepo
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		
@@ -5931,6 +5961,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"112"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityCastRange"				"900"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -6226,6 +6257,7 @@
 		// Stats		
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"30"
+		"AbilityCastRange"				"900"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -6233,7 +6265,7 @@
 		"ItemCost"						"4700"
 		"ItemShopTags"					"int;armor;hard_to_tag"
 		"ItemQuality"					"epic"
-		"ItemAliases"					"shiva's guard"
+		"ItemAliases"					"shiva's guard;shivas"
 		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		
@@ -6453,7 +6485,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"4800"
+		"ItemCost"						"4850"
 		"ItemShopTags"					"regen_health;regen_mana;str;agi;int;hard_to_tag"
 		"ItemQuality"					"epic"
 		"ItemAliases"					"ls;linken's sphere"
@@ -6625,7 +6657,7 @@
 		"ItemCost"						"2150"
 		"ItemShopTags"					"regen_health;block;health_pool"
 		"ItemQuality"					"epic"
-		"ItemAliases"					"vanguard"
+		"ItemAliases"					"vg;vanguard"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		
 		// Special	
@@ -6698,6 +6730,7 @@
 		// Stats		
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"46.0"
+		"AbilityCastRange"				"900"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -6825,7 +6858,7 @@
 		"ItemCost"						"2200"
 		"ItemShopTags"					"damage;armor;int;hard_to_tag"
 		"ItemQuality"					"epic"
-		"ItemAliases"					"blade mail;blademail"
+		"ItemAliases"					"bm;blade mail;blademail"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		
 		// Special	
@@ -6969,7 +7002,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_spell_resist"	"30"
+				"bonus_spell_resist"	"25"
 			}
 			"02"
 			{
@@ -6979,7 +7012,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"tooltip_resist"	"30"
+				"tooltip_resist"	"25"
 			}
 			"04"
 			{
@@ -7043,6 +7076,7 @@
 		"ItemContributesToNetWorthWhenDropped"	"0"
 		"AllowedInBackpack"				"0"
 		"IsTempestDoubleClonable"		"0"
+		"ItemDisassembleRule"				"DOTA_ITEM_DISASSEMBLE_NEVER"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -7159,6 +7193,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"137"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE"
+		"AbilityCastRange" 				"700"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -7344,7 +7379,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"crit_multiplier"		"230"
+				"crit_multiplier"		"235"
 			}
 		}
 	}
@@ -7509,7 +7544,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"cleave_damage_percent"	"35"
+				"cleave_damage_percent"	"40"
 			}
 			"05"
 			{
@@ -7529,12 +7564,12 @@
 			"08"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"cleave_ending_width"			"280"
+				"cleave_ending_width"			"300"
 			}			
 			"09"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"cleave_distance"			"520"
+				"cleave_distance"			"570"
 			}
 			"10"
 			{
@@ -7593,7 +7628,7 @@
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityManaCost"				"125"
-		"ItemCost"						"4950"
+		"ItemCost"						"5000"
 		"ItemShopTags"					"agi;str;int;attack_speed;move_speed;hard_to_tag"
 		"ItemQuality"					"epic"
 		"ItemAliases"					"manta style"
@@ -7817,7 +7852,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_agility"			"14"
+				"bonus_agility"			"12"
 			}
 			"02"
 			{
@@ -8072,7 +8107,7 @@
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityManaCost"				"75"
-		"ItemCost"						"5100"
+		"ItemCost"						"5150"
 		"ItemShopTags"					"damage;attack_speed;movespeed;hard_to_tag"
 		"ItemQuality"					"epic"
 		"ItemAliases"					"sb;invis;shadow blade"
@@ -8116,7 +8151,7 @@
 			"07"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"windwalk_bonus_damage"	"225"
+				"windwalk_bonus_damage"	"175"
 			}
 			"08"
 			{
@@ -8206,7 +8241,7 @@
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"maim_chance"			"30"
+				"maim_chance"			"35"
 			}
 			"07"
 			{
@@ -8497,7 +8532,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"5675"
+		"ItemCost"						"5775"
 		"ItemShopTags"					"agi;str;int;hard_to_tag;mana_pool;health_pool;unique"
 		"ItemQuality"					"artifact"
 		"ItemAliases"					"eos;eye of skadi"
@@ -8604,7 +8639,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"maim_chance"			"24"
+				"maim_chance"			"30"
 			}
 			"04"
 			{
@@ -8645,7 +8680,7 @@
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"725"	
+		"ItemCost"						"800"	
 		"ItemShopTags"					""
 		
 		// Recipe
@@ -8680,7 +8715,7 @@
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityManaCost"				"0"
-		"ItemCost"						"1800"
+		"ItemCost"						"1975"
 		"ItemShopTags"					"damage;armor;unique;hard_to_tag"
 		"ItemQuality"					"artifact"
 		"ItemAliases"					"hotd;helm of the dominator"
@@ -8692,7 +8727,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stats"		"6"
+				"bonus_stats"			"2"
 			}
 			"02"
 			{
@@ -9011,7 +9046,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"berserk_bonus_attack_speed"	"100"
+				"berserk_bonus_attack_speed"	"120"
 			}
 			"04"
 			{
@@ -9522,6 +9557,7 @@
 		// Stats		
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"55.0"
+		"AbilityCastRange"				"900"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -9661,7 +9697,7 @@
 		"ItemCost"						"275"
 		"ItemShopTags"					"hard_to_tag"
 		"ItemQuality"					"component"
-		"ItemAliases"					"orb of venom"
+		"ItemAliases"					"oov;orb of venom"
 		"SideShop"						"1"
 
 		// Special	
@@ -9707,7 +9743,6 @@
 		"ItemShopTags"					"hard_to_tag"
 		"ItemQuality"					"component"
 		"ItemAliases"					"blight stone"
-		"SideShop"						"1"
 
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -9738,7 +9773,7 @@
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"700"	
+		"ItemCost"						"575"	
 		"ItemShopTags"					""
 		
 		// Recipe
@@ -9767,10 +9802,11 @@
 		// Stats		
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"30.0"
+		"AbilityCastRange"				"900"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1780"
+		"ItemCost"						"1655"
 		"ItemShopTags"					"str;agi;int;damage;move_speed;attack_speed;hard_to_tag"
 		"ItemQuality"					"rare"
 		"ItemAliases"					"drum of endurance"
@@ -9980,7 +10016,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_armor"			"10"
+				"bonus_armor"			"12"
 			}
 			"02"
 			{
@@ -9995,7 +10031,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"allied_armor"			"10"
+				"allied_armor"			"12"
 			}
 			"05"
 			{
@@ -10005,12 +10041,12 @@
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"armor_reduction"		"-10"
+				"armor_reduction"		"-12"
 			}
 			"07"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"enemy_armor_reduction_tooltip"		"10"
+				"enemy_armor_reduction_tooltip"		"12"
 			}
 			"08"
 			{
@@ -10046,6 +10082,7 @@
 		// Stats		
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"1.0"
+		"AbilityCastRange"				"1200"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -10140,7 +10177,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"xp_per_use"			"100"
+				"xp_per_use"			"135"
 			}
 			"03"
 			{
@@ -10293,11 +10330,12 @@
 		// Stats		
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"40"
+		"AbilityCastRange" 				"900"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityManaCost"				"0"
-		"ItemCost"						"5275"
+		"ItemCost"						"5375"
 		"ItemShopTags"					"int;armor;regen_health;hard_to_tag"
 		"ItemQuality"					"rare"
 		"ItemAliases"					"guardian greaves"
@@ -10417,7 +10455,7 @@
 		// Stats		
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"16"
-		"AbilityCastRange"				"1000"
+		"AbilityCastRange"				"1150"
 		"AbilityCastPoint"				"0.0"
 
 
@@ -10716,7 +10754,7 @@
 
 		// Stats		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"30"
+		"AbilityCooldown"				"22"
 		"AbilityCastRange"				"600"
 		"AbilityCastPoint"				"0.0"
 
@@ -10754,7 +10792,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"maim_chance"			"24"
+				"maim_chance"			"35"
 			}
 			"05"
 			{
@@ -10832,7 +10870,8 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"212"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE"
-		
+		"AbilityCastRange" 				"900"
+
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
 		"ItemCost"						"985"
