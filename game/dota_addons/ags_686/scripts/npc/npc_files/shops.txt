@@ -3,7 +3,7 @@
 	"consumables"
 	{
 		"item"		"item_clarity"	
-		"item"		"item_faerie_fire"
+		"item"		"item_faerie_fire"				
 		"item"		"item_enchanted_mango"
 		"item"		"item_tango"
 		"item"		"item_flask"
@@ -35,8 +35,13 @@
 		"item"		"item_ogre_axe"
 		"item"		"item_blade_of_alacrity"
 		"item"		"item_staff_of_wizardry"
-		"item"		"item_attr_bonus"		
-		"item"		"item_slippers_of_halcyon"
+		"item"		"item_river_painter7"	
+		"item"		"item_river_painter6"	
+		"item"		"item_river_painter5"	
+		"item"		"item_river_painter4"	
+		"item"		"item_river_painter3"	
+		"item"		"item_river_painter2"	
+		"item"		"item_river_painter"	
 	}
 
 	"weapons_armor"
@@ -235,7 +240,6 @@
 		"item"		"item_reaver"
 		"item"		"item_eagle"
 		"item"		"item_relic"
- 		"item"		"item_spectate_game"		
 	}
 
 	"pregame"
