@@ -53,7 +53,7 @@ function CagsGameMode:InitGameMode()
 	FinalNotice = false
 	HostQualityPunish = false
 	MegaAutoSpawn = false
-	bMultiplyGold = false
+	bMultiplyGold = true
 	
 	PlayerSum = PlayerResource:GetPlayerCount()
 	RadiantPlayers = 0
@@ -907,7 +907,6 @@ function CagsGameMode:OnHeroPicked( event )
 		if not(heroString =="npc_dota_hero_monkey_king" and MonkeyKingExist) then
 			if PlayerTeam[playerID+1] == 2 then
 				PlayerResource:ModifyGold(playerID, PlayerResource:GetGold(playerID)*(RadiantGC-1)+625*RadiantGC*(5-RadiantPlayers)/RadiantPlayers, false, 0)
-				print("2")
 			end
 			if PlayerTeam[playerID+1] == 3 then
 				PlayerResource:ModifyGold(playerID, PlayerResource:GetGold(playerID)*(DireGC-1)+625*DireGC*(5-DirePlayers)/DirePlayers, false, 0)

@@ -4,8 +4,8 @@ function customSchema:init()
 
     -- Check the schema_examples folder for different implementations
 
-    -- Flag Example
-    statCollection:setFlags({ version = storage:GetVersion() })
+    -- Flags
+    statCollection:setFlags({ version = CEnfosGameMode:GetVersion() })
 
     -- Listen for changes in the current state
     ListenToGameEvent('game_rules_state_change', function(keys)
@@ -43,9 +43,7 @@ function BuildGameArray()
     local game = {}
 
     -- Add game values here as game.someValue = GetSomeGameValue()
-    game.eh = storage:GetEmpGoldHist() -- Team advantage history
-    game.wn = storage:getWinner() -- Team winner
-    --game.th=storage:GetTideKillers()
+    game.r = Enfos.curRound
 
     return game
 end
@@ -59,31 +57,23 @@ function BuildPlayersArray()
 
                 local hero = PlayerResource:GetSelectedHeroEntity(playerID)
 
-                local teamname = "North"
-                if hero:GetTeamNumber() == DOTA_TEAM_GOODGUYS then
-                    teamname = "South"
-                end
-
-                local kickStatus = "Active"
-                if storage:GetDisconnectState(playerID) ~= 0 then
-                    kickStatus = "Kicked"
-                end
-
                 table.insert(players, {
                     -- steamID32 required in here
                     steamID32 = PlayerResource:GetSteamAccountID(playerID),
 
                     -- Example functions for generic stats are defined in statcollection/lib/utilities.lua
                     -- Add player values here as someValue = GetSomePlayerValue(),
-                    tm = teamname,
-                    shp = storage:GetHeroName(playerID), --Hero by its short name
-                    kls = hero:GetKills(), --Player Kills
-                    dth = hero:GetDeaths(), --Player Deaths
-                    lvl = hero:GetLevel(), --Player Levels
-                    afk = kickStatus, --Custom Player status
-
-                    -- Item List
-                    bo = storage:GetPlayerHist(playerID)
+                    hn = GetHeroName(playerID), -- name
+                    hl = hero:GetLevel(), -- level
+                    hnw = GetNetworth(PlayerResource:GetSelectedHeroEntity(playerID)), -- Networth
+                    pt = GetPlayerTeam(PlayerResource:GetSelectedHeroEntity(playerID)), -- Hero's team
+                    pk = hero:GetKills(), -- Kills
+                    pa = hero:GetAssists(), -- Assists
+                    pd = hero:GetDeaths(), -- Deaths
+                    plh = PlayerResource:GetLastHits(hero:GetPlayerOwnerID()), -- Last hits
+                    ph = PlayerResource:GetHealing(hero:GetPlayerOwnerID()), -- Healing
+                    pgpm = math.floor(PlayerResource:GetGoldPerMin(hero:GetPlayerOwnerID())), -- GPM
+                    il = GetItemList(hero) -- Item list
                 })
             end
         end

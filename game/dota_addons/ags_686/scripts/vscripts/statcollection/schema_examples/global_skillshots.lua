@@ -5,7 +5,7 @@ function customSchema:init()
     -- Check the schema_examples folder for different implementations
 
     -- Flag Example
-    statCollection:setFlags({ version = storage:GetVersion() })
+    statCollection:setFlags({ version = _G.AGS_VERSION })
 
     -- Listen for changes in the current state
     ListenToGameEvent('game_rules_state_change', function(keys)
@@ -43,9 +43,7 @@ function BuildGameArray()
     local game = {}
 
     -- Add game values here as game.someValue = GetSomeGameValue()
-    game.eh = storage:GetEmpGoldHist() -- Team advantage history
-    game.wn = storage:getWinner() -- Team winner
-    --game.th=storage:GetTideKillers()
+    game.gw = _G.GAME_WINNER_TEAM -- winning team
 
     return game
 end
@@ -59,31 +57,35 @@ function BuildPlayersArray()
 
                 local hero = PlayerResource:GetSelectedHeroEntity(playerID)
 
-                local teamname = "North"
-                if hero:GetTeamNumber() == DOTA_TEAM_GOODGUYS then
-                    teamname = "South"
-                end
-
-                local kickStatus = "Active"
-                if storage:GetDisconnectState(playerID) ~= 0 then
-                    kickStatus = "Kicked"
+                local heroTeam = PlayerResource:GetTeam(playerID)
+                local heroTeamStr = ""
+                if heroTeam == 2 then
+                    heroTeamStr = "Radiant"
+                elseif heroTeam == 3 then
+                    heroTeamStr = "Dire"
                 end
 
                 table.insert(players, {
                     -- steamID32 required in here
-                    steamID32 = PlayerResource:GetSteamAccountID(playerID),
+                    steamID32 = PlayerResource:GetSteamAccountID(playerID) or 0,
 
                     -- Example functions for generic stats are defined in statcollection/lib/utilities.lua
                     -- Add player values here as someValue = GetSomePlayerValue(),
-                    tm = teamname,
-                    shp = storage:GetHeroName(playerID), --Hero by its short name
-                    kls = hero:GetKills(), --Player Kills
-                    dth = hero:GetDeaths(), --Player Deaths
-                    lvl = hero:GetLevel(), --Player Levels
-                    afk = kickStatus, --Custom Player status
+                    ph = GetHeroName(playerID) or "", -- Hero by its short name
+                    pt = heroTeamStr or "", -- Team this hero belongs to
+                    pl = hero:GetLevel() or 1, -- Hero level at the end of the game
+                    pnw = GetNetworth(hero) or 0, -- Sum of hero gold and item worth
+                    pk = hero:GetKills() or 0, -- Number of kills of this players hero
+                    pa = hero:GetAssists() or 0, -- Number of deaths of this players hero
+                    pd = hero:GetDeaths() or 0, -- Number of deaths of this players hero
 
-                    -- Item List
-                    bo = storage:GetPlayerHist(playerID)
+                    -- Item list
+                    is1 = GetItemSlot(hero, 0),
+                    is2 = GetItemSlot(hero, 1),
+                    is3 = GetItemSlot(hero, 2),
+                    is4 = GetItemSlot(hero, 3),
+                    is5 = GetItemSlot(hero, 4),
+                    is6 = GetItemSlot(hero, 5)
                 })
             end
         end

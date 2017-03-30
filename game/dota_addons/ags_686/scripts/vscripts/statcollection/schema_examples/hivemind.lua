@@ -5,7 +5,7 @@ function customSchema:init()
     -- Check the schema_examples folder for different implementations
 
     -- Flag Example
-    statCollection:setFlags({ version = storage:GetVersion() })
+    statCollection:setFlags({ version = HIVEMIND_VERSION, kills_to_win = KILLS_TO_WIN })
 
     -- Listen for changes in the current state
     ListenToGameEvent('game_rules_state_change', function(keys)
@@ -43,10 +43,12 @@ function BuildGameArray()
     local game = {}
 
     -- Add game values here as game.someValue = GetSomeGameValue()
-    game.eh = storage:GetEmpGoldHist() -- Team advantage history
-    game.wn = storage:getWinner() -- Team winner
-    --game.th=storage:GetTideKillers()
-
+    game.l = 0 -- Round length
+    for k, v in pairs(round_times) do
+        if v.length then
+            game.l = math.floor(game.l + v.length)
+        end
+    end
     return game
 end
 
@@ -59,31 +61,16 @@ function BuildPlayersArray()
 
                 local hero = PlayerResource:GetSelectedHeroEntity(playerID)
 
-                local teamname = "North"
-                if hero:GetTeamNumber() == DOTA_TEAM_GOODGUYS then
-                    teamname = "South"
-                end
-
-                local kickStatus = "Active"
-                if storage:GetDisconnectState(playerID) ~= 0 then
-                    kickStatus = "Kicked"
-                end
-
                 table.insert(players, {
                     -- steamID32 required in here
                     steamID32 = PlayerResource:GetSteamAccountID(playerID),
 
                     -- Example functions for generic stats are defined in statcollection/lib/utilities.lua
                     -- Add player values here as someValue = GetSomePlayerValue(),
-                    tm = teamname,
-                    shp = storage:GetHeroName(playerID), --Hero by its short name
-                    kls = hero:GetKills(), --Player Kills
-                    dth = hero:GetDeaths(), --Player Deaths
-                    lvl = hero:GetLevel(), --Player Levels
-                    afk = kickStatus, --Custom Player status
-
-                    -- Item List
-                    bo = storage:GetPlayerHist(playerID)
+                    ph = GetHeroName(playerID), -- Hero by its short name
+                    ps = GameMode:GetScoreForTeam(PlayerResource:GetPlayer(playerID):GetTeam()), -- Score
+                    st = math.floor(split_time[PlayerResource:GetPlayer(playerID)] or 0), -- The amount of time this player spent in split form
+                    ht = math.floor(hero_time[PlayerResource:GetPlayer(playerID)] or 0), -- The amount of time this player spent in hero form
                 })
             end
         end

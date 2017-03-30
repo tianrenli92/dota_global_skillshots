@@ -54,7 +54,7 @@ end
 -- String of item name, without the item_ prefix
 function GetItemSlot(hero, slot)
     local item = hero:GetItemInSlot(slot)
-    local itemName = "empty"
+    local itemName = ""
 
     if item then
         itemName = string.gsub(item:GetAbilityName(), "item_", "")
