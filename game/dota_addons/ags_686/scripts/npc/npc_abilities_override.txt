@@ -3751,7 +3751,7 @@
 			"04"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus_agility"		"6 12 18 24"
+				"bonus_agility"		"6 14 22 30"
 			}
 			"05"
 			{
@@ -7786,7 +7786,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"60 50 40 30"
+		"AbilityCooldown"				"60 48 36 24"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -7863,17 +7863,17 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"slow_movement_speed"	"-30"
+				"slow_movement_speed"	"-50"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"slow_attack_speed"		"-30"
+				"slow_attack_speed"		"-50"
 			}
 			"06"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"slow_duration"			"4.0 4.0 4.0"
+				"slow_duration"			"2.5"
 			}
 			"07"
 			{
@@ -7894,16 +7894,6 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"cast_range_scepter"	"20000"
-			}
-			"11"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"slow_movement_speed_scepter"	"-50"
-			}
-			"12"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"slow_attack_speed_scepter"		"-50"
 			}
 		}			
 	}
@@ -10125,7 +10115,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"duration_damage"		"30 40 50 60"
+				"duration_damage"		"30 45 60 75"
 			}
 			"03"
 			{
@@ -13247,7 +13237,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"attack_speed_bonus"	"50 60 70 80"
+				"attack_speed_bonus"	"40 50 60 70"
 			}
 			"02"
 			{
@@ -13310,7 +13300,7 @@
 		
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"110 110 110 110"
+		"AbilityManaCost"				"140 130 120 110"
 			
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -15029,7 +15019,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_movespeed"		"-14 -24 -34 -44"
+				"bonus_movespeed"		"-16 -26 -36 -46"
 			}
 			"03"
 			{
@@ -16735,7 +16725,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage"				"20 35 0"
+				"damage"				"25 40 0"
 			}
 			"03"
 			{
@@ -16745,7 +16735,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage_scepter"		"40 70 0"
+				"damage_scepter"		"50 80 0"
 			}
 			"05"
 			{
@@ -16802,7 +16792,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"13 11 9 7"
+		"AbilityCooldown"				"10 9 8 7"
 		"AbilityDuration"				"4.0 4.0 4.0 4.0"
 
 		// Cost
@@ -16820,7 +16810,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"damage"				"37.5 50 62.5 75"
+				"damage"				"30 50 70 90"
 			}
 			"02"
 			{
@@ -16840,7 +16830,7 @@
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"charge_restore_time"	"13 11 9 7"
+				"charge_restore_time"	"10 9 8 7"
 			}
 		}
 	}
@@ -17827,7 +17817,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"16.0"
+				"duration"				"16"
 			}
 			"03"
 			{
@@ -18055,7 +18045,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"45.0"
+		"AbilityCooldown"				"55.0"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -19663,7 +19653,7 @@
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"crit_multiplier"		"140 160 180"
+				"crit_multiplier"		"160 180 200"
 			}
 		}
 	}
@@ -20463,7 +20453,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_building_damage"		"300"
+				"bonus_building_damage"		"90 180 270"
 			}
 		}
 	}
@@ -21413,7 +21403,7 @@
 			"03"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"movement_slow"					"-22 -24 -26 -28"
+				"movement_slow"					"-16 -20 -24 -28"
 			}
 			"04"
 			{
@@ -21507,7 +21497,7 @@
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"70"
+		"AbilityCooldown"				"100 85 70"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -25594,7 +25584,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"30 40 50 60"
+		"AbilityManaCost"				"30 50 70 90"
 
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
@@ -28324,7 +28314,7 @@
 			"09"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"slow_duration"			"1.4 1.6 1.8 2.0"
+				"slow_duration"			"0.8 1.2 1.6 2.0"
 			}
 		}
 	}
@@ -29824,7 +29814,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"stun_duration"				"0.5 1.0 1.5 2.0"
+				"stun_duration"				"0.4 0.8 1.2 1.6"
 			}
 			"02"
 			{
@@ -30006,7 +29996,7 @@
 			"13"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"impact_movement_slow_tooltip"	"30 45 60 75"
+				"impact_movement_slow_tooltip"	"20 40 60 80"
 			}
 		}
 	}
@@ -30031,12 +30021,12 @@
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"16"
+		"AbilityCooldown"				"19 17 15 13"
 		"AbilityChannelTime"			"1.6"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"100 110 120 130"
+		"AbilityManaCost"				"130 120 110 100"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -30050,7 +30040,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"impact_movement_slow"	"30 45 60 75"
+				"impact_movement_slow"	"20 40 60 80"
 			}
 			"03"
 			{
@@ -30106,7 +30096,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"100 85 70"
+		"AbilityCooldown"				"130 110 90"
 		"AbilityDuration"				"13.0"
 
 		// Cost
@@ -30223,7 +30213,7 @@
 			"06"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"max_duration"				"35"
+				"max_duration"				"600"
 			}
 		}
 	}
@@ -30322,7 +30312,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"hp_heal"				"100"
+				"hp_heal"				"90"
 			}
 			"02"
 			{
@@ -35358,6 +35348,11 @@
 			{
 				"var_type"					"FIELD_FLOAT"
 				"fade_time"					"2.0"
+			}		
+			"07"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"600.0"
 			}
 		}
 	}
@@ -37002,28 +36997,33 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   //items offset: +37000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
 	//=================================================================================================================
 	// Blink dagger
@@ -39979,7 +39979,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"12"
+				"bonus_stat"			"15"
 			}	
 			"03"
 			{
@@ -40060,12 +40060,12 @@
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"xp_multiplier"			"2.5"
+				"xp_multiplier"			"1.75"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_gold"			"200"
+				"bonus_gold"			"250"
 			}
 			"04"
 			{
@@ -46706,7 +46706,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"poison_damage"			"3.0"
+				"poison_damage"			"5.0"
 			}
 			"02"
 			{
@@ -46721,7 +46721,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"poison_duration"		"6.0"
+				"poison_duration"		"4.5"
 			}			
 		}
 	}
@@ -47953,7 +47953,7 @@
 		"ItemResult"					"item_tranquil_boots"
 		"ItemRequirements"
 		{
-			"01"						"item_boots;item_ring_of_protection;item_ring_of_regen"
+			"01"						"item_boots;item_wind_lace;item_ring_of_regen"
 		}
 	}
 	
@@ -47974,7 +47974,7 @@
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"900"
+		"ItemCost"						"975"
 		"ItemShopTags"					"move_speed;regen_health;armor"
 		"ItemQuality"					"rare"
 		"ItemAliases"					"tranquil boots"
@@ -47993,12 +47993,12 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_armor"			"3"
+				"bonus_armor"			"0"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_health_regen"	"12"
+				"bonus_health_regen"	"14"
 			}
 			"04"
 			{

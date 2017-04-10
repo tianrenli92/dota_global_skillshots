@@ -202,6 +202,7 @@
 					"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"  "%bonus_movement"
 					"MODIFIER_PROPERTY_MANA_BONUS"			"%bonus_mana"
 					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	"%bonus_armor"
+					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"	"%bonus_hp_regen"
 				}
 			}
 			
@@ -252,7 +253,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_movement"		"70"
+				"bonus_movement"		"100"
 			}
 			"02"
 			{
@@ -262,24 +263,29 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_armor"			"3"
+				"bonus_armor"			"0"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"hp_per_tick"			"40"
+				"bonus_hp_regen"			"14"
 			}
 			"05"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"tick_rate"				"1"
+				"var_type"				"FIELD_INTEGER"
+				"hp_per_tick"			"40"
 			}
 			"06"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"9.0"
+				"tick_rate"				"1"
 			}
 			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"9.0"
+			}
+			"08"
 			{
 				"var_type"				"FIELD_INTEGER"
 				"cast_range"				"20000"
